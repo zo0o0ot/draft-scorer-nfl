@@ -26,3 +26,5 @@ catch
 }
 
 AnsiConsole.MarkupLine(":abacus: :abacus::abacus::abacus::abacus::abacus:");
+
+// Read in player and school data from CSV file.
