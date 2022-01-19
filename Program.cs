@@ -56,7 +56,7 @@ JObject draft = null;
 if(draftExists && draftComplete)
 {
     AnsiConsole.MarkupLine(":abacus: The draft is complete and we have the draft JSON! No need to load :abacus:");
-    stuff = JsonConvert.DeserializeObject(File.ReadAllText($"actual-draft{Path.DirectorySeparatorChar}{draftYear}{Path.DirectorySeparatorChar}{draftYear}Draft.json"));
+    //stuff = JsonConvert.DeserializeObject(File.ReadAllText($"actual-draft{Path.DirectorySeparatorChar}{draftYear}{Path.DirectorySeparatorChar}{draftYear}Draft.json"));
     jsonDraft = File.ReadAllText($"actual-draft{Path.DirectorySeparatorChar}{draftYear}{Path.DirectorySeparatorChar}{draftYear}Draft.json");
 }
 else
@@ -97,10 +97,39 @@ draftRounds.Add(Round5Picks);
 draftRounds.Add(Round6Picks);
 draftRounds.Add(Round7Picks);
 
-// Now that we have the draft picks, we can score them.
+// Now that we have the draft picks, we can make them into ActualDraftPick objects.
+
+//var r1Children = Round1Picks
+
+//Get picks from from Round1Picks and get values needed to create ActualDraftPick objects
+List<ActualDraftPick> actualDraftPicks = new List<ActualDraftPick>();
+
+var picksTest =
+    from p in Round1Picks
+    select new {
+        Pick = (int?)p["overall"],
+        Round = 1,
+        PlayerName = (string?)p["prospect"]["name"],
+        School = (string?)p["prospect"]["team_name"],
+        Traded = (bool?)p["traded"]
+    };
+foreach (var pick in picksTest)
+{
+    actualDraftPicks.Add(new ActualDraftPick()
+    {
+        Pick = pick.Pick,
+        Round = pick.Round,
+        Player = pick.PlayerName,
+        School = pick.School,
+        Traded = pick.Traded ?? false
+    });
+}
 
 
-dynamic draftasdf = JsonConvert.DeserializeObject(jsonDraft);
+// Given ActualDraftPick objects, we can score them.
+
+
+
 var asdf = "";
 
 
