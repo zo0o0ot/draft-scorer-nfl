@@ -5,6 +5,7 @@ using System.Text.RegularExpressions;
 using SharpConfig;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
+using System.Globalization;
 
 // See https://aka.ms/new-console-template for more information
 
@@ -33,7 +34,7 @@ catch
 if (apikey == "")
 {
     AnsiConsole.WriteLine("No API key found. Please add one to scorer.local.conf");
-    return;
+    return 0;
 }
 
 AnsiConsole.MarkupLine(":abacus: Loading Fantasy Draft :abacus:");
@@ -45,13 +46,12 @@ using (var csv = new CsvReader(reader, System.Globalization.CultureInfo.Invarian
     csv.Context.RegisterClassMap<FantasyDraftPickMap>();
     var fantasyDraftPickRecords = csv.GetRecords<FantasyDraftPick>();
     fantasyDraftPicks = fantasyDraftPickRecords.ToList();
-    var foo = "";
 }
 
 bool draftExists =  File.Exists($"actual-draft{Path.DirectorySeparatorChar}{draftYear}{Path.DirectorySeparatorChar}{draftYear}Draft.json");
 // Read in player and school data from CSV file.
 string jsonDraft = "";
-dynamic stuff = JsonConvert.DeserializeObject(jsonDraft);
+//dynamic stuff = JsonConvert.DeserializeObject(jsonDraft);
 JObject draft = null;
 if(draftExists && draftComplete)
 {
@@ -115,6 +115,8 @@ for (int i = 1; i <= 7; i++)
         };
     foreach (var pick in picksTest)
     {
+        (string State, string Conference) stateAndConference = GetStateAndConference(pick.School);
+
         actualDraftPicks.Add(new ActualDraftPick()
         {
             Pick = pick.Pick,
@@ -123,6 +125,8 @@ for (int i = 1; i <= 7; i++)
             School = pick.School,
             Traded = pick.Traded ?? false,
             LeagifyPoints = GetLeagifyPoints(pick.Round, pick.PickInRound, pick.Traded ?? false),
+            State = stateAndConference.State,
+            Conference = stateAndConference.Conference
 
         });
     }
@@ -138,7 +142,102 @@ var asdf = "";
 
 int GetLeagifyPoints(int round, int pickInRound, bool traded)
 {
-    return 0;
+    int score = 0;
+    score = round switch
+    {
+        1 => ((Func<int>)(() => {
+            score = traded ? 10 : 0;
+            if (pickInRound == 1)
+            {
+                score += 40;
+            }
+            else if (pickInRound >= 2 && pickInRound <= 10)
+            {
+                score += 35;
+            }
+            else if (pickInRound >= 11 && pickInRound <= 20)
+            {
+                score += 30;
+            }
+            else if (pickInRound >= 21 && pickInRound <= 32)
+            {
+                score += 25;
+            }
+            return score;
+        }))(),
+        2 => ((Func<int>)(() => {
+            score = traded ? 10 : 0;
+            if (pickInRound >= 1 && pickInRound <= 16)
+            {
+                score += 20;
+            }
+            else if (pickInRound >= 17 && pickInRound <= 50)
+            {
+                score += 15;
+            }
+            return score;
+        }))(),
+        3 => score = traded ? 20 : 10,
+        4 => score = traded ? 18 : 8,
+        5 => score = traded ? 17 : 7,
+        6 => score = traded ? 16 : 6,
+        7 => score = traded ? 15 : 5,
+        _ => score = 0
+    };
+    return score;
 }
 
+(string, string) GetStateAndConference(string school)
+{
+    List<SCS> schoolsAndConferences;
 
+    using (var reader = new StreamReader($"info{Path.DirectorySeparatorChar}SchoolStatesAndConferences.csv"))
+    using (var csv = new CsvReader(reader, CultureInfo.InvariantCulture))
+    {
+        schoolsAndConferences = csv.GetRecords<SCS>().ToList();
+    }
+    
+    var scs = from s in schoolsAndConferences
+                            where s.School == school
+                            select s;
+
+    SCS? currentSchoolConferenceState = scs.FirstOrDefault();
+
+    // var srfd = stateResult.FirstOrDefault();
+    // string sr = "";
+
+    // if (srfd != null)
+    // {
+    //     sr = srfd.ToString();
+    // }
+    // else
+    // {
+    //     Console.WriteLine("Error matching school!");
+    // }
+    
+
+    // if(sr.Length > 0)
+    // {
+    //     return sr;
+    // }
+    // else
+    // {
+    //     return "";
+    // }
+    if (currentSchoolConferenceState != null)
+    {
+        return (currentSchoolConferenceState.State, currentSchoolConferenceState.Conference);
+    }
+    else
+    {
+        return ("", "");
+    }
+}
+
+return 0;
+public class SCS
+{
+    public string School { get; set; }
+    public string State { get; set; }
+    public string Conference { get; set; }
+}
