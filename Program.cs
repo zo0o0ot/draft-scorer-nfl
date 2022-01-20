@@ -132,6 +132,28 @@ for (int i = 1; i <= 7; i++)
     }
 }
 
+// join actualDraftPicks to fantasyDraftPicks and sum up points for each owner.
+var ownerPicks = from d in actualDraftPicks
+                 join f in fantasyDraftPicks on d.School equals f.Player
+                 select new {
+                     d.Pick,
+                     d.Round,
+                     d.Player,
+                     d.School,
+                     d.Traded,
+                     d.LeagifyPoints,
+                     d.State,
+                     d.Conference,
+                     f.Owner
+                 };
+
+
+// Along with points, get some stats about the draft.
+var ownerPoints = ownerPicks.GroupBy(o => o.Owner).Select(o => new {
+    Owner = o.Key,
+    Points = o.Sum(p => p.LeagifyPoints)
+});
+
 
 
 // Given ActualDraftPick objects, we can score them.
