@@ -99,31 +99,35 @@ draftRounds.Add(Round7Picks);
 
 // Now that we have the draft picks, we can make them into ActualDraftPick objects.
 
-//var r1Children = Round1Picks
-
 //Get picks from from Round1Picks and get values needed to create ActualDraftPick objects
 List<ActualDraftPick> actualDraftPicks = new List<ActualDraftPick>();
-
-var picksTest =
-    from p in Round1Picks
-    select new {
-        Pick = (int?)p["overall"],
-        Round = 1,
-        PlayerName = (string?)p["prospect"]["name"],
-        School = (string?)p["prospect"]["team_name"],
-        Traded = (bool?)p["traded"]
-    };
-foreach (var pick in picksTest)
+for (int i = 1; i <= 7; i++)
 {
-    actualDraftPicks.Add(new ActualDraftPick()
+    var picksTest =
+        from p in draftRounds[i - 1]
+        select new {
+            Pick = (int?)p["overall"],
+            PickInRound = (int)p["number"],
+            Round = i,
+            PlayerName = (string?)p["prospect"]["name"],
+            School = (string?)p["prospect"]["team_name"],
+            Traded = (bool?)p["traded"]
+        };
+    foreach (var pick in picksTest)
     {
-        Pick = pick.Pick,
-        Round = pick.Round,
-        Player = pick.PlayerName,
-        School = pick.School,
-        Traded = pick.Traded ?? false
-    });
+        actualDraftPicks.Add(new ActualDraftPick()
+        {
+            Pick = pick.Pick,
+            Round = pick.Round,
+            Player = pick.PlayerName,
+            School = pick.School,
+            Traded = pick.Traded ?? false,
+            LeagifyPoints = GetLeagifyPoints(pick.Round, pick.PickInRound, pick.Traded ?? false),
+
+        });
+    }
 }
+
 
 
 // Given ActualDraftPick objects, we can score them.
@@ -131,5 +135,10 @@ foreach (var pick in picksTest)
 
 
 var asdf = "";
+
+int GetLeagifyPoints(int round, int pickInRound, bool traded)
+{
+    return 0;
+}
 
 
