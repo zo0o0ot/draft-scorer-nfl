@@ -1,0 +1,8 @@
+tasks:
+- init: echo 'init script' # runs during prebuild
+  command: echo 'start script'
+vscode:
+  extensions:
+    - mechatroner.rainbow-csv
+image:
+  file: .gitpod.Dockerfile
