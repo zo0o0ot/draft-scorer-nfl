@@ -154,7 +154,15 @@ var ownerPoints = ownerPicks.GroupBy(o => o.Owner).Select(o => new {
     Points = o.Sum(p => p.LeagifyPoints)
 });
 
-
+// for ownerPicks, get the owner's name and the number of picks they made in each round
+var ownerPicksByRoundAndOwner = ownerPicks.GroupBy(o => new {
+    o.Round,
+    o.Owner
+}).Select(o => new {
+    Round = o.Key.Round,
+    Owner = o.Key.Owner,
+    NumberOfPicks = o.Count()
+});
 
 // Given ActualDraftPick objects, we can score them.
 
