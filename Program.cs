@@ -48,6 +48,34 @@ using (var csv = new CsvReader(reader, System.Globalization.CultureInfo.Invarian
     fantasyDraftPicks = fantasyDraftPickRecords.ToList();
 }
 
+bool prospectsExist = File.Exists($"actual-draft{Path.DirectorySeparatorChar}{draftYear}{Path.DirectorySeparatorChar}{draftYear}Prospects.json");
+string jsonProspects = "";
+//dynamic stuff = JsonConvert.DeserializeObject(jsonDraft);
+JObject Jprospects = null;
+if(prospectsExist)
+{
+    AnsiConsole.MarkupLine(":abacus: We have a prospect list! :abacus:");
+    //stuff = JsonConvert.DeserializeObject(File.ReadAllText($"actual-draft{Path.DirectorySeparatorChar}{draftYear}{Path.DirectorySeparatorChar}{draftYear}Draft.json"));
+    jsonProspects = File.ReadAllText($"actual-draft{Path.DirectorySeparatorChar}{draftYear}{Path.DirectorySeparatorChar}{draftYear}Prospects.json");
+}
+else
+{
+    //Load the prospects
+    using(var client = new HttpClient())
+    {
+        //Send HTTP request from here.
+        client.DefaultRequestHeaders.Accept.Clear();
+
+        var prospectsStringTask = client.GetStringAsync("https://api.sportradar.us/draft/nfl/trial/v1/en/2021/prospects.json?api_key=" + apikey);
+
+        jsonProspects = await prospectsStringTask;
+        string fileName = $"actual-draft{Path.DirectorySeparatorChar}{draftYear}{Path.DirectorySeparatorChar}{draftYear}Prospects.json"; 
+        File.WriteAllText(fileName, jsonProspects);
+    }
+
+}
+
+
 bool draftExists =  File.Exists($"actual-draft{Path.DirectorySeparatorChar}{draftYear}{Path.DirectorySeparatorChar}{draftYear}Draft.json");
 // Read in player and school data from CSV file.
 string jsonDraft = "";
@@ -67,9 +95,9 @@ else
         //Send HTTP request from here.
         client.DefaultRequestHeaders.Accept.Clear();
 
-        var stringTask = client.GetStringAsync("https://api.sportradar.us/draft/nfl/trial/v1/en/2021/draft.json?api_key=nfadymz26xkk28a99c3fedye");
+        var draftStringTask = client.GetStringAsync("https://api.sportradar.us/draft/nfl/trial/v1/en/2021/draft.json?api_key=" + apikey);
 
-        jsonDraft = await stringTask;
+        jsonDraft = await draftStringTask;
         string fileName = $"actual-draft{Path.DirectorySeparatorChar}{draftYear}{Path.DirectorySeparatorChar}{draftYear}Draft.json"; 
         //var Draft = JsonConvert.DeserializeObject<JToken>(jsonDraft);
         File.WriteAllText(fileName, jsonDraft);
@@ -164,8 +192,71 @@ var ownerPicksByRoundAndOwner = ownerPicks.GroupBy(o => new {
     NumberOfPicks = o.Count()
 });
 
-// Given ActualDraftPick objects, we can score them.
+// change ownerPicksByRoundAndOwner to an arrayList starting with the owner name followed by the number of picks in each round
+var ownerPicksByRoundAndOwnerArray = ownerPicksByRoundAndOwner.Select(o => new {
+    o.Owner,
+    o.Round,
+    o.NumberOfPicks
+}).ToList();
 
+// create list of owners from ownerPicksByRoundAndOwnerArray
+var justTheOwners = ownerPicksByRoundAndOwner.Select(o => new {
+    o.Owner
+}).Distinct().ToList();
+
+// change ownerPicksByRoundAndOwnerArray to an arrayList starting with the owner name followed by the number of picks in each round
+// Create string array of length 8
+// string[] Ross = new string[8]; 
+// string[] AJ = new string[8];
+// string[] Tilo = new string[8];
+// string[] Jared = new string[8];
+// string[] Jawad = new string[8];
+
+Dictionary<string, int[]> picksForTable = new Dictionary<string, int[]>();
+foreach (var owner in justTheOwners)
+{
+    picksForTable.Add(owner.Owner, new int[7]);
+}
+foreach (var pickResult in ownerPicksByRoundAndOwnerArray)
+{
+    picksForTable[pickResult.Owner][(int)pickResult.Round - 1] = pickResult.NumberOfPicks;
+    Console.WriteLine($"{pickResult.Owner} has {pickResult.NumberOfPicks} picks in round {pickResult.Round}");
+}
+
+// Output results of ownerPicksByRoundAndOwner to a Spectre Console table
+AnsiConsole.MarkupLine(":abacus: Outputting round results to a table... :abacus:");
+// Create a Spectre Console table with fully qualified class
+
+
+var roundPicksTable = new Spectre.Console.Table();
+roundPicksTable.Border(TableBorder.Double).BorderColor(ConsoleColor.Yellow);
+roundPicksTable.AddColumn("Owner");
+roundPicksTable.AddColumn("Round 1");
+roundPicksTable.AddColumn("Round 2");
+roundPicksTable.AddColumn("Round 3");
+roundPicksTable.AddColumn("Round 4");
+roundPicksTable.AddColumn("Round 5");
+roundPicksTable.AddColumn("Round 6");
+roundPicksTable.AddColumn("Round 7");
+roundPicksTable.AddColumn("Total");
+foreach (var owner in picksForTable)
+{
+    string[] ownerResult = {owner.Key, 
+        owner.Value[0].ToString(), 
+        owner.Value[1].ToString(), 
+        owner.Value[2].ToString(), 
+        owner.Value[3].ToString(), 
+        owner.Value[4].ToString(), 
+        owner.Value[5].ToString(), 
+        owner.Value[6].ToString(), 
+        owner.Value.Sum().ToString()};
+
+    roundPicksTable.AddRow(ownerResult);
+}
+
+AnsiConsole.Write(roundPicksTable);
+
+// Given ActualDraftPick objects, we can score them.
 
 
 var asdf = "";
