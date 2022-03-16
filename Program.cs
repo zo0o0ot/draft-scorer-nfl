@@ -78,6 +78,7 @@ Jprospects = JObject.Parse(jsonProspects);
 
 JArray prospects = (JArray)Jprospects["prospects"];
 
+// Create list of prospects from JArray
 
 
 bool draftExists =  File.Exists($"actual-draft{Path.DirectorySeparatorChar}{draftYear}{Path.DirectorySeparatorChar}{draftYear}Draft.json");
@@ -143,7 +144,8 @@ for (int i = 1; i <= 7; i++)
             Round = i,
             PlayerName = (string?)p["prospect"]["name"],
             School = (string?)p["prospect"]["team_name"],
-            Traded = (bool?)p["traded"]
+            Traded = (bool?)p["traded"],
+            PlayerID = (Guid?)Guid.Parse(p["prospect"]["id"].ToString()),
         };
     foreach (var pick in picksTest)
     {
@@ -167,7 +169,7 @@ for (int i = 1; i <= 7; i++)
 // join actualDraftPicks to fantasyDraftPicks and sum up points for each owner.
 var ownerPicks = from d in actualDraftPicks
                  join f in fantasyDraftPicks on d.School equals f.Player
-                 join 
+                 
                  select new {
                      d.Pick,
                      d.Round,

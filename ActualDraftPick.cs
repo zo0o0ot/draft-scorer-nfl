@@ -9,5 +9,6 @@ public class ActualDraftPick
     public int LeagifyPoints { get; set; }
     public string Conference { get; set; }
     public string State { get; set; }
+    public Guid? PlayerId { get; set; }
 
 }
