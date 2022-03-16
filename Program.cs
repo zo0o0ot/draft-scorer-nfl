@@ -74,6 +74,10 @@ else
     }
 
 }
+Jprospects = JObject.Parse(jsonProspects);
+
+JArray prospects = (JArray)Jprospects["prospects"];
+
 
 
 bool draftExists =  File.Exists($"actual-draft{Path.DirectorySeparatorChar}{draftYear}{Path.DirectorySeparatorChar}{draftYear}Draft.json");
@@ -163,6 +167,7 @@ for (int i = 1; i <= 7; i++)
 // join actualDraftPicks to fantasyDraftPicks and sum up points for each owner.
 var ownerPicks = from d in actualDraftPicks
                  join f in fantasyDraftPicks on d.School equals f.Player
+                 join 
                  select new {
                      d.Pick,
                      d.Round,
