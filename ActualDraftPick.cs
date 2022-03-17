@@ -10,5 +10,7 @@ public class ActualDraftPick
     public string Conference { get; set; }
     public string State { get; set; }
     public Guid? PlayerId { get; set; }
+    public string? Experience { get; set; }
+    public string? Position { get; set; }
 
 }

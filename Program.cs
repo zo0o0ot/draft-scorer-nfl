@@ -78,6 +78,19 @@ Jprospects = JObject.Parse(jsonProspects);
 
 JArray prospects = (JArray)Jprospects["prospects"];
 
+List<Prospect> prospectList = new List<Prospect>();
+foreach (var prospect in prospects)
+{
+    var newProspect = new Prospect();
+    newProspect.PlayerId = (Guid)prospect["id"];
+    newProspect.PlayerName = (string)prospect["name"];
+    newProspect.School = (string)prospect["team"]["market"];
+    newProspect.Position = (string)prospect["position"];
+    newProspect.Conference = (string)prospect["conference"]["name"];
+    newProspect.Experience = (string)prospect["experience"];
+    prospectList.Add(newProspect);
+}
+
 // Create list of prospects from JArray
 
 
@@ -145,7 +158,7 @@ for (int i = 1; i <= 7; i++)
             PlayerName = (string?)p["prospect"]["name"],
             School = (string?)p["prospect"]["team_name"],
             Traded = (bool?)p["traded"],
-            PlayerID = (Guid?)Guid.Parse(p["prospect"]["id"].ToString()),
+            PlayerId = (Guid?)Guid.Parse(p["prospect"]["id"].ToString()),
         };
     foreach (var pick in picksTest)
     {
@@ -160,14 +173,39 @@ for (int i = 1; i <= 7; i++)
             Traded = pick.Traded ?? false,
             LeagifyPoints = GetLeagifyPoints(pick.Round, pick.PickInRound, pick.Traded ?? false),
             State = stateAndConference.State,
-            Conference = stateAndConference.Conference
-
+            Conference = stateAndConference.Conference,
+            PlayerId = pick.PlayerId
         });
     }
 }
 
+var actualDraftPicksVerified = from adp in actualDraftPicks
+                                join p in prospectList on adp.PlayerId equals p.PlayerId
+
+                                select new ActualDraftPick{
+                                    Pick = adp.Pick,
+                                    Round =adp.Round,
+                                    Player = adp.Player,
+                                    School = p.School,
+                                    Traded = adp.Traded,
+                                    LeagifyPoints = adp.LeagifyPoints,
+                                    State = adp.State,
+                                    Conference = adp.Conference,
+                                    Position = p.Position,
+                                    Experience = p.Experience,
+                                    PlayerId = p.PlayerId
+                                };
+
+//Go through the picks again and make sure if the school was updated, we get an updated State.
+foreach (var pick in actualDraftPicksVerified)
+{
+    (string State, string Conference) stateAndConference = GetStateAndConference(pick.School);
+    pick.State = stateAndConference.State;
+    pick.Conference = stateAndConference.Conference;
+}
+
 // join actualDraftPicks to fantasyDraftPicks and sum up points for each owner.
-var ownerPicks = from d in actualDraftPicks
+var ownerPicks = from d in actualDraftPicksVerified
                  join f in fantasyDraftPicks on d.School equals f.Player
                  
                  select new {
@@ -265,8 +303,6 @@ AnsiConsole.Write(roundPicksTable);
 
 // Given ActualDraftPick objects, we can score them.
 
-
-var asdf = "";
 
 int GetLeagifyPoints(int round, int pickInRound, bool traded)
 {
