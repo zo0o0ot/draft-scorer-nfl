@@ -84,9 +84,9 @@ foreach (var prospect in prospects)
     var newProspect = new Prospect();
     newProspect.PlayerId = (Guid)prospect["id"];
     newProspect.PlayerName = (string)prospect["name"];
-    newProspect.School = (string)prospect["team"]["market"];
+    newProspect.School = (string)prospect["team"]?["market"] ?? "";
     newProspect.Position = (string)prospect["position"];
-    newProspect.Conference = (string)prospect["conference"]["name"];
+    newProspect.Conference = (string)prospect["conference"]?["name"] ?? (string)prospect["team_name"];
     newProspect.Experience = (string)prospect["experience"];
     prospectList.Add(newProspect);
 }
@@ -301,7 +301,15 @@ foreach (var owner in picksForTable)
 
 AnsiConsole.Write(roundPicksTable);
 
-// Given ActualDraftPick objects, we can score them.
+// Given ActualDraftPick objects, we can score them with a bar chart
+var pointChart = new BarChart();
+pointChart.Label = "[green bold underline]Draft Points[/]";
+
+foreach (var owner in ownerPoints.OrderByDescending(o => o.Points).ToList())
+{
+    pointChart.AddItem(owner.Owner, owner.Points, Color.Green);
+}
+AnsiConsole.Write(pointChart);
 
 
 int GetLeagifyPoints(int round, int pickInRound, bool traded)
