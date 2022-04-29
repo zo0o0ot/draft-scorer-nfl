@@ -222,7 +222,12 @@ var ownerPicks = from d in actualDraftPicksVerified
 
 foreach (var pick in ownerPicks)
 {
-    AnsiConsole.Write(new Markup($"Pick [bold yellow]{pick.Pick}[/]: [red]{pick.Player}[/] from [bold yellow]{pick.School}[/] gives [lime]{pick.LeagifyPoints}[/] points to [fuchsia]{pick.Owner}[/]\n"));
+    bool traded = pick.Traded.HasValue ? pick.Traded.Value : false;
+    if (traded)
+        AnsiConsole.Write(new Markup($"Pick [bold yellow]{pick.Pick}[/]: :american_football:[red]{pick.Player}[/]:american_football: from [bold yellow]{pick.School}[/] gives [lime]{pick.LeagifyPoints}[/] points to :backhand_index_pointing_right:[fuchsia]{pick.Owner}[/]:backhand_index_pointing_left: [aqua]via Trade[/]\n"));
+    else
+        AnsiConsole.Write(new Markup($"Pick [bold yellow]{pick.Pick}[/]: :american_football:[red]{pick.Player}[/]:american_football: from [bold yellow]{pick.School}[/] gives [lime]{pick.LeagifyPoints}[/] points to :backhand_index_pointing_right:[fuchsia]{pick.Owner}[/]:backhand_index_pointing_left:\n"));    
+
 }
 
 // Along with points, get some stats about the draft.
