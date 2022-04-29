@@ -65,8 +65,7 @@ else
     {
         //Send HTTP request from here.
         client.DefaultRequestHeaders.Accept.Clear();
-
-        var prospectsStringTask = client.GetStringAsync("https://api.sportradar.us/draft/nfl/trial/v1/en/2021/prospects.json?api_key=" + apikey);
+        var prospectsStringTask = client.GetStringAsync($"https://api.sportradar.us/draft/nfl/trial/v1/en/{draftYear}/prospects.json?api_key=" + apikey);
 
         jsonProspects = await prospectsStringTask;
         string fileName = $"actual-draft{Path.DirectorySeparatorChar}{draftYear}{Path.DirectorySeparatorChar}{draftYear}Prospects.json"; 
@@ -113,9 +112,9 @@ else
         //Send HTTP request from here.
         client.DefaultRequestHeaders.Accept.Clear();
 
-        var draftStringTask = client.GetStringAsync("https://api.sportradar.us/draft/nfl/trial/v1/en/2021/draft.json?api_key=" + apikey);
+        var draftStringTask = await client.GetStringAsync($"https://api.sportradar.us/draft/nfl/trial/v1/en/{draftYear}/draft.json?api_key=" + apikey);
 
-        jsonDraft = await draftStringTask;
+        jsonDraft = draftStringTask;
         string fileName = $"actual-draft{Path.DirectorySeparatorChar}{draftYear}{Path.DirectorySeparatorChar}{draftYear}Draft.json"; 
         //var Draft = JsonConvert.DeserializeObject<JToken>(jsonDraft);
         File.WriteAllText(fileName, jsonDraft);
@@ -151,6 +150,7 @@ for (int i = 1; i <= 7; i++)
 {
     var picksTest =
         from p in draftRounds[i - 1]
+        where p["prospect"] != null
         select new {
             Pick = (int?)p["overall"],
             PickInRound = (int)p["number"],
