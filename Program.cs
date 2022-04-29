@@ -220,6 +220,10 @@ var ownerPicks = from d in actualDraftPicksVerified
                      f.Owner
                  };
 
+foreach (var pick in ownerPicks)
+{
+    AnsiConsole.Write(new Markup($"Pick [bold yellow]{pick.Pick}[/]: [red]{pick.Player}[/] from [bold yellow]{pick.School}[/] gives [lime]{pick.LeagifyPoints}[/] points to [fuchsia]{pick.Owner}[/]\n"));
+}
 
 // Along with points, get some stats about the draft.
 var ownerPoints = ownerPicks.GroupBy(o => o.Owner).Select(o => new {
