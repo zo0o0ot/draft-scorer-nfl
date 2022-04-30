@@ -121,7 +121,7 @@ else
     }
 }
 draft = JObject.Parse(jsonDraft);
-AnsiConsole.MarkupLine(":abacus: Scoring the draft... :abacus:");
+
 
 //var picks = stuff.rounds.picks;
 string startDate = draft["draft"]["end_date"].ToString();
@@ -219,6 +219,19 @@ var ownerPicks = from d in actualDraftPicksVerified
                      d.Conference,
                      f.Owner
                  };
+// Show players not matching an owner by seeing which of the actualDraftPicksVerified are not in ownerPicks.
+var playersNotMatching = from d in actualDraftPicksVerified
+                          where !ownerPicks.Any(o => o.School == d.School)
+                          select d;
+
+AnsiConsole.MarkupLine(":abacus: Players not matching up to owners... :abacus:");
+
+foreach (var player in playersNotMatching)
+{
+    AnsiConsole.Write(new Markup($"Pick [bold yellow]{player.Pick}[/]: :american_football:[red]{player.Player}[/]:american_football: from [bold yellow]{player.School}[/] gives [lime]{player.LeagifyPoints}[/] points to :thumbs_down:[fuchsia]No One[/]:thumbs_down:\n"));
+}
+
+AnsiConsole.MarkupLine(":abacus: Scoring the draft... :abacus:");
 
 foreach (var pick in ownerPicks)
 {
@@ -274,7 +287,7 @@ foreach (var owner in justTheOwners)
 foreach (var pickResult in ownerPicksByRoundAndOwnerArray)
 {
     picksForTable[pickResult.Owner][(int)pickResult.Round - 1] = pickResult.NumberOfPicks;
-    Console.WriteLine($"{pickResult.Owner} has {pickResult.NumberOfPicks} picks in round {pickResult.Round}");
+    AnsiConsole.Write(new Markup ($"[fuchsia]{pickResult.Owner}[/] has [fuchsia]{pickResult.NumberOfPicks}[/] picks in round [fuchsia]{pickResult.Round}[/]\n"));
 }
 
 // Output results of ownerPicksByRoundAndOwner to a Spectre Console table
