@@ -204,6 +204,47 @@ foreach (var pick in actualDraftPicksVerified)
     pick.Conference = stateAndConference.Conference;
 }
 
+// sort actualDraftPicksVerified by LeagifyPoints, grouped by School.
+var draftPicksBySchool = from adp in actualDraftPicksVerified
+                             orderby adp.LeagifyPoints descending
+                             group adp by adp.School into adpGroup
+                             select new {
+                                 School = adpGroup.Key,
+                                 LeagifyPoints = adpGroup.Sum(x => x.LeagifyPoints),
+                                 Picks = adpGroup.ToList()
+                             };
+
+// Join draftPicksBySschool with fantasyDraftPicks by School. Ordered by LeafifyPoints.
+var draftPicksBySchoolAndOwner = from dpbs in draftPicksBySchool
+                                              join fdp in fantasyDraftPicks on dpbs.School equals fdp.Player
+                                              select new {
+                                                  School = dpbs.School,
+                                                  LeagifyPoints = dpbs.LeagifyPoints,
+                                                  Picks = dpbs.Picks,
+                                                  Bid = fdp.Bid,
+                                                  ProjPoints = fdp.ProjectedPoints,
+                                                  Difference = dpbs.LeagifyPoints - fdp.ProjectedPoints,
+                                              };
+
+// sort draftPicksBySchoolAndOwner by LeagifyPoints
+var draftPicksBySchoolAndOwnerSorted = from dpbs in draftPicksBySchoolAndOwner
+                                       orderby dpbs.LeagifyPoints descending
+                                       select dpbs;
+
+var d2 = draftPicksBySchoolAndOwner.OrderByDescending(o => o.LeagifyPoints).ToList();
+
+// Create Bar Chart of draft picks by School and Owner
+
+//var pointChart = new BarChart();
+//pointChart.Label = "[red bold underline]Draft Points[/]";
+
+// foreach (var school in ownerPoints.OrderByDescending(o => o.Points).ToList())
+// {
+//     pointChart.AddItem(owner.Owner, owner.Points, Color.Red);
+// }
+// AnsiConsole.Write(pointChart);
+
+
 // join actualDraftPicks to fantasyDraftPicks and sum up points for each owner.
 var ownerPicks = from d in actualDraftPicksVerified
                  join f in fantasyDraftPicks on d.School equals f.Player
