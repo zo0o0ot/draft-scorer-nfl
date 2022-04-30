@@ -22,7 +22,8 @@
 		"mechatroner.rainbow-csv",
 		"github.copilot",
 		"eamodio.gitlens",
-		"mohsen1.prettify-json"
+		"mohsen1.prettify-json",
+		"ccimage.jsonviewer"
 	],
 
 	// Use 'forwardPorts' to make a list of ports inside the container available locally.
