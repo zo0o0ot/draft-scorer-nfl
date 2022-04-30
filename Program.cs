@@ -222,27 +222,58 @@ var draftPicksBySchoolAndOwner = from dpbs in draftPicksBySchool
                                                   LeagifyPoints = dpbs.LeagifyPoints,
                                                   Picks = dpbs.Picks,
                                                   Bid = fdp.Bid,
-                                                  ProjPoints = fdp.ProjectedPoints,
+                                                  ProjectedPoints = fdp.ProjectedPoints,
                                                   Difference = dpbs.LeagifyPoints - fdp.ProjectedPoints,
+                                                  Owner = fdp.Owner,
                                               };
 
 // sort draftPicksBySchoolAndOwner by LeagifyPoints
-var draftPicksBySchoolAndOwnerSorted = from dpbs in draftPicksBySchoolAndOwner
-                                       orderby dpbs.LeagifyPoints descending
-                                       select dpbs;
-
-var d2 = draftPicksBySchoolAndOwner.OrderByDescending(o => o.LeagifyPoints).ToList();
+var draftPicksBySchoolAndOwnerSortedByLeagifyPoints = draftPicksBySchoolAndOwner.OrderByDescending(o => o.LeagifyPoints).ToList();
 
 // Create Bar Chart of draft picks by School and Owner
 
-//var pointChart = new BarChart();
-//pointChart.Label = "[red bold underline]Draft Points[/]";
+var schoolChart = new BarChart();
+schoolChart.Label = "[red bold underline]Draft Points By School[/]";
 
-// foreach (var school in ownerPoints.OrderByDescending(o => o.Points).ToList())
-// {
-//     pointChart.AddItem(owner.Owner, owner.Points, Color.Red);
-// }
-// AnsiConsole.Write(pointChart);
+foreach (var school in draftPicksBySchoolAndOwnerSortedByLeagifyPoints)
+{
+    string schoolLabel = $"{school.School} - {school.Owner}";
+    schoolChart.AddItem(schoolLabel, school.LeagifyPoints, Color.Red);
+}
+AnsiConsole.Write(schoolChart);
+
+
+
+
+var draftPicksBySchoolAndOwnerSortedByDifference = draftPicksBySchoolAndOwner.OrderByDescending(o => o.Difference).ToList();
+
+var differenceTable = new Spectre.Console.Table();
+differenceTable.Border(TableBorder.Double).BorderColor(ConsoleColor.DarkMagenta);
+differenceTable.AddColumn("School");
+differenceTable.AddColumn("Owner");
+differenceTable.AddColumn("Bid");
+differenceTable.AddColumn("Projected");
+differenceTable.AddColumn("Actual");
+differenceTable.AddColumn("Difference");
+differenceTable.AddColumn("Points per Dollar");
+
+foreach (var school in draftPicksBySchoolAndOwnerSortedByDifference)
+{
+    string[] ownerResult = {
+        school.School,
+        school.Owner,  
+        school.Bid.ToString(),
+        school.ProjectedPoints.ToString(),
+        school.LeagifyPoints.ToString(),
+        school.Difference.ToString(),
+        (school.LeagifyPoints / school.Bid).ToString(),
+        };
+
+    differenceTable.AddRow(ownerResult);
+}
+
+AnsiConsole.Write(differenceTable);
+
 
 
 // join actualDraftPicks to fantasyDraftPicks and sum up points for each owner.
