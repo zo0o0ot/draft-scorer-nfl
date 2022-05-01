@@ -241,9 +241,38 @@ foreach (var school in draftPicksBySchoolAndOwnerSortedByLeagifyPoints)
     schoolChart.AddItem(schoolLabel, school.LeagifyPoints, Color.Red);
 }
 AnsiConsole.Write(schoolChart);
+AnsiConsole.WriteLine();
 
+// Find results for any player in fantasyDraftPicks that is not in draftPicksBySchoolAndOwner.
+var flops = from fdp in fantasyDraftPicks
+              join dpbs in draftPicksBySchoolAndOwner on fdp.Player equals dpbs.School into dpbsGroup
+              from dpbs in dpbsGroup.DefaultIfEmpty()
+              where dpbs == null
+              select new {
+                  Player = fdp.Player,
+                  Bid = fdp.Bid,
+                  ProjectedPoints = fdp.ProjectedPoints,
+                  Difference = fdp.ProjectedPoints - 0,
+                  Owner = fdp.Owner,
+              };
 
+if (flops.Count() > 0)
+{
+    var flopSchools = new BarChart();
+    flopSchools.Label = "[aqua bold underline]Drafted Schools with NO POINTS[/]";
 
+    foreach (var school in flops)
+    {
+        string flopLabel = $"{school.Player} - {school.Owner}";
+        flopSchools.AddItem(flopLabel, school.ProjectedPoints, Color.Aqua);
+    }
+    AnsiConsole.Write(flopSchools);
+}
+else
+{
+    AnsiConsole.Write(new Markup("[green]No flop schools! Every school we drafted had players drafted![/]\n"));
+}
+AnsiConsole.WriteLine();
 
 var draftPicksBySchoolAndOwnerSortedByDifference = draftPicksBySchoolAndOwner.OrderByDescending(o => o.Difference).ToList();
 
@@ -255,6 +284,7 @@ differenceTable.AddColumn("Bid");
 differenceTable.AddColumn("Projected");
 differenceTable.AddColumn("Actual");
 differenceTable.AddColumn("Difference");
+differenceTable.AddColumn("Performance Ratio");
 differenceTable.AddColumn("Points per Dollar");
 
 foreach (var school in draftPicksBySchoolAndOwnerSortedByDifference)
@@ -266,14 +296,15 @@ foreach (var school in draftPicksBySchoolAndOwnerSortedByDifference)
         school.ProjectedPoints.ToString(),
         school.LeagifyPoints.ToString(),
         school.Difference.ToString(),
-        (school.LeagifyPoints / school.Bid).ToString(),
+        ((float)school.LeagifyPoints / school.ProjectedPoints).ToString(),
+        ((float)school.LeagifyPoints / school.Bid).ToString(),
         };
 
     differenceTable.AddRow(ownerResult);
 }
 
 AnsiConsole.Write(differenceTable);
-
+AnsiConsole.WriteLine();
 
 
 // join actualDraftPicks to fantasyDraftPicks and sum up points for each owner.
@@ -302,9 +333,9 @@ foreach (var player in playersNotMatching)
 {
     AnsiConsole.Write(new Markup($"Pick [bold yellow]{player.Pick}[/]: :american_football:[red]{player.Player}[/]:american_football: from [bold yellow]{player.School}[/] gives [lime]{player.LeagifyPoints}[/] points to :thumbs_down:[fuchsia]No One[/]:thumbs_down:\n"));
 }
-
+AnsiConsole.WriteLine();
 AnsiConsole.MarkupLine(":abacus: Scoring the draft... :abacus:");
-
+AnsiConsole.WriteLine();
 foreach (var pick in ownerPicks)
 {
     bool traded = pick.Traded.HasValue ? pick.Traded.Value : false;
@@ -356,16 +387,16 @@ foreach (var owner in justTheOwners)
 {
     picksForTable.Add(owner.Owner, new int[7]);
 }
-foreach (var pickResult in ownerPicksByRoundAndOwnerArray)
-{
-    picksForTable[pickResult.Owner][(int)pickResult.Round - 1] = pickResult.NumberOfPicks;
-    AnsiConsole.Write(new Markup ($"[fuchsia]{pickResult.Owner}[/] has [fuchsia]{pickResult.NumberOfPicks}[/] picks in round [fuchsia]{pickResult.Round}[/]\n"));
-}
+// foreach (var pickResult in ownerPicksByRoundAndOwnerArray)
+// {
+//     picksForTable[pickResult.Owner][(int)pickResult.Round - 1] = pickResult.NumberOfPicks;
+//     AnsiConsole.Write(new Markup ($"[fuchsia]{pickResult.Owner}[/] has [fuchsia]{pickResult.NumberOfPicks}[/] picks in round [fuchsia]{pickResult.Round}[/]\n"));
+// }
 
 // Output results of ownerPicksByRoundAndOwner to a Spectre Console table
 AnsiConsole.MarkupLine(":abacus: Outputting round results to a table... :abacus:");
 // Create a Spectre Console table with fully qualified class
-
+AnsiConsole.WriteLine();
 
 var roundPicksTable = new Spectre.Console.Table();
 roundPicksTable.Border(TableBorder.Double).BorderColor(ConsoleColor.Yellow);
@@ -394,7 +425,7 @@ foreach (var owner in picksForTable)
 }
 
 AnsiConsole.Write(roundPicksTable);
-
+AnsiConsole.WriteLine();
 // Given ActualDraftPick objects, we can score them with a bar chart
 var pointChart = new BarChart();
 pointChart.Label = "[green bold underline]Draft Points[/]";
@@ -404,7 +435,7 @@ foreach (var owner in ownerPoints.OrderByDescending(o => o.Points).ToList())
     pointChart.AddItem(owner.Owner, owner.Points, Color.Green);
 }
 AnsiConsole.Write(pointChart);
-
+AnsiConsole.WriteLine();
 
 int GetLeagifyPoints(int round, int pickInRound, bool traded)
 {
