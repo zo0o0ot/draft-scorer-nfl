@@ -387,11 +387,11 @@ foreach (var owner in justTheOwners)
 {
     picksForTable.Add(owner.Owner, new int[7]);
 }
-// foreach (var pickResult in ownerPicksByRoundAndOwnerArray)
-// {
-//     picksForTable[pickResult.Owner][(int)pickResult.Round - 1] = pickResult.NumberOfPicks;
-//     AnsiConsole.Write(new Markup ($"[fuchsia]{pickResult.Owner}[/] has [fuchsia]{pickResult.NumberOfPicks}[/] picks in round [fuchsia]{pickResult.Round}[/]\n"));
-// }
+foreach (var pickResult in ownerPicksByRoundAndOwnerArray)
+{
+    picksForTable[pickResult.Owner][(int)pickResult.Round - 1] = pickResult.NumberOfPicks;
+    AnsiConsole.Write(new Markup ($"[fuchsia]{pickResult.Owner}[/] has [fuchsia]{pickResult.NumberOfPicks}[/] picks in round [fuchsia]{pickResult.Round}[/]\n"));
+}
 
 // Output results of ownerPicksByRoundAndOwner to a Spectre Console table
 AnsiConsole.MarkupLine(":abacus: Outputting round results to a table... :abacus:");
