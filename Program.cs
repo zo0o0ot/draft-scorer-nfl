@@ -248,6 +248,14 @@ else
 {
     AnsiConsole.Write("No school results yet. Has the draft begun?");
 }
+// Write results to CSV
+string schoolResultsFileName  = $"leagify-result-stats{Path.DirectorySeparatorChar}{draftYear}{Path.DirectorySeparatorChar}{draftYear}DraftPointsBySchool.csv";
+using (var stream = new StreamWriter(schoolResultsFileName))
+using (var csv = new CsvWriter(stream, CultureInfo.InvariantCulture))
+{
+    csv.WriteRecords(draftPicksBySchoolAndOwnerSortedByLeagifyPoints);
+}
+
 AnsiConsole.WriteLine();
 
 // Find results for any player in fantasyDraftPicks that is not in draftPicksBySchoolAndOwner.
@@ -273,6 +281,13 @@ if (flops.Count() > 0)
         string flopLabel = $"{school.Player} - {school.Owner}";
         flopSchools.AddItem(flopLabel, school.ProjectedPoints, Color.Aqua);
     }
+    // Write results to CSV
+    string flopsFileName  = $"leagify-result-stats{Path.DirectorySeparatorChar}{draftYear}{Path.DirectorySeparatorChar}{draftYear}Flops.csv";
+    using (var stream = new StreamWriter(flopsFileName))
+    using (var csv = new CsvWriter(stream, CultureInfo.InvariantCulture))
+    {
+        csv.WriteRecords(flops);
+    }
     AnsiConsole.Write(flopSchools);
 }
 else
@@ -294,6 +309,7 @@ differenceTable.AddColumn("Difference");
 differenceTable.AddColumn("Performance Ratio");
 differenceTable.AddColumn("Points per Dollar");
 
+var schoolStatsList = new List<SchoolStats>();
 foreach (var school in draftPicksBySchoolAndOwnerSortedByDifference)
 {
     string[] ownerResult = {
@@ -307,10 +323,38 @@ foreach (var school in draftPicksBySchoolAndOwnerSortedByDifference)
         ((float)school.LeagifyPoints / school.Bid).ToString(),
         };
 
+    //Write these results to a class so that they can be output to CSV.
+    SchoolStats schoolStat = new SchoolStats{
+    // public string School { get; set; }
+    // public string Owner { get; set; }
+    // public int Bid { get; set; }
+    // public int Projected { get; set; }
+    // public int Actual { get; set; }
+    // public int Difference { get; set; }
+    // public float PerformanceRatio { get; set; }
+    // public float PointsPerDollar { get; set; }
+        School = school.School,
+        Owner = school.Owner,
+        Bid = school.Bid,
+        Projected = school.ProjectedPoints,
+        Actual = school.LeagifyPoints,
+        Difference = school.Difference,
+        PerformanceRatio = (float)school.LeagifyPoints / school.ProjectedPoints,
+        PointsPerDollar = (float)school.LeagifyPoints / school.Bid
+    };
+
+    schoolStatsList.Add(schoolStat);
     differenceTable.AddRow(ownerResult);
 }
 
 AnsiConsole.Write(differenceTable);
+// Write results to CSV
+string differenceTableFileName  = $"leagify-result-stats{Path.DirectorySeparatorChar}{draftYear}{Path.DirectorySeparatorChar}{draftYear}DifferenceTable.csv";
+using (var stream = new StreamWriter(differenceTableFileName))
+using (var csv = new CsvWriter(stream, CultureInfo.InvariantCulture))
+{
+    csv.WriteRecords(schoolStatsList);
+}
 AnsiConsole.WriteLine();
 
 
@@ -445,6 +489,13 @@ foreach (var owner in ownerPointsList)
 if (ownerPointsList.Count > 0)
 {
     AnsiConsole.Write(pointChart);
+    // Write results to CSV
+    string ownerResultsFileName  = $"leagify-result-stats{Path.DirectorySeparatorChar}{draftYear}{Path.DirectorySeparatorChar}{draftYear}OwnerResults.csv";
+    using (var stream = new StreamWriter(ownerResultsFileName))
+    using (var csv = new CsvWriter(stream, CultureInfo.InvariantCulture))
+    {
+        csv.WriteRecords(ownerPointsList);
+    }
 }
 else
 {
@@ -552,4 +603,18 @@ public class SCS
     public string School { get; set; }
     public string State { get; set; }
     public string Conference { get; set; }
+}
+
+public class SchoolStats
+{
+
+    public string School { get; set; }
+    public string Owner { get; set; }
+    public int Bid { get; set; }
+    public int Projected { get; set; }
+    public int Actual { get; set; }
+    public int Difference { get; set; }
+    public float PerformanceRatio { get; set; }
+    public float PointsPerDollar { get; set; }
+
 }

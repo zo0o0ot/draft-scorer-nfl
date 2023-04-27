@@ -1,0 +1,49 @@
+School,Owner,Bid,Projected,Actual,Difference,PerformanceRatio,PointsPerDollar
+LSU,AJ,26,80,165,85,2.0625,6.3461537
+Penn State,Jared,38,99,152,53,1.5353535,4
+Georgia,AJ,86,247,295,48,1.194332,3.4302325
+Ohio State,Ross,53,110,157,47,1.4272727,2.962264
+Alabama,Tilo,73,154,193,39,1.2532468,2.6438355
+Baylor,Jawad,27,57,96,39,1.6842105,3.5555556
+Cincinnati,Jared,70,112,146,34,1.3035715,2.0857143
+Oklahoma,Tilo,36,73,106,33,1.4520547,2.9444444
+UCLA,AJ,10,42,75,33,1.7857143,7.5
+Kentucky,Jawad,25,57,87,30,1.5263158,3.48
+Tennessee,Jared,1,28,58,30,2.0714285,58
+Washington,AJ,28,63,90,27,1.4285715,3.2142856
+Iowa State,Jared,23,45,71,26,1.5777777,3.0869565
+North Carolina,Ross,17,37,61,24,1.6486486,3.5882354
+Michigan State,AJ,4,31,52,21,1.6774193,13
+Illinois,Jared,3,21,42,21,2,14
+San Diego State,Jared,1,30,50,20,1.6666666,50
+Texas Tech,Ross,6,14,33,19,2.357143,5.5
+Florida,Ross,20,46,63,17,1.3695652,3.15
+Central Michigan,Jawad,1,29,45,16,1.5517242,45
+Arizona State,AJ,5,35,50,15,1.4285715,10
+Mississippi State,Ross,20,51,65,14,1.2745098,3.25
+Iowa,Tilo,23,43,53,10,1.2325581,2.3043478
+Houston,AJ,8,38,48,10,1.2631578,6
+Minnesota,Jawad,25,56,65,9,1.1607143,2.6
+Arkansas,Jawad,21,44,52,8,1.1818181,2.4761906
+Nebraska,AJ,4,33,40,7,1.2121212,10
+Wisconsin,Ross,5,37,44,7,1.1891892,8.8
+North Carolina State,AJ,10,44,50,6,1.1363636,5
+Northern Iowa,Ross,20,35,40,5,1.1428572,2
+South Carolina,Jared,1,28,33,5,1.1785715,33
+Ole Miss,Jawad,21,54,58,4,1.074074,2.7619047
+Washington State,Tilo,3,22,25,3,1.1363636,8.333333
+Oklahoma State,AJ,1,14,16,2,1.1428572,16
+Auburn,Tilo,3,31,30,-1,0.9677419,10
+USC,Jawad,25,58,56,-2,0.9655172,2.24
+Florida State,Tilo,3,37,35,-2,0.9459459,11.666667
+Utah,Jared,9,38,35,-3,0.92105263,3.8888888
+Western Michigan,Tilo,3,28,25,-3,0.89285713,8.333333
+Pittsburgh,Ross,19,43,38,-5,0.88372093,2
+Rutgers,Jawad,2,15,10,-5,0.6666667,5
+Clemson,Jawad,26,52,45,-7,0.86538464,1.7307693
+Boston College,Jared,3,38,30,-8,0.7894737,10
+Purdue,Ross,15,43,35,-8,0.81395346,2.3333333
+Michigan,Tilo,52,112,103,-9,0.91964287,1.9807693
+Notre Dame,Jawad,27,58,47,-11,0.8103448,1.7407408
+Texas A&M,Jared,47,90,76,-14,0.84444445,1.6170213
+Oregon,Ross,25,54,35,-19,0.6481481,1.4
