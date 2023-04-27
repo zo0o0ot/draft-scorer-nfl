@@ -240,7 +240,14 @@ foreach (var school in draftPicksBySchoolAndOwnerSortedByLeagifyPoints)
     string schoolLabel = $"{school.School} - {school.Owner}";
     schoolChart.AddItem(schoolLabel, school.LeagifyPoints, Color.Red);
 }
-AnsiConsole.Write(schoolChart);
+if (draftPicksBySchoolAndOwnerSortedByLeagifyPoints.Count > 0)
+{
+    AnsiConsole.Write(schoolChart);
+}
+else
+{
+    AnsiConsole.Write("No school results yet. Has the draft begun?");
+}
 AnsiConsole.WriteLine();
 
 // Find results for any player in fantasyDraftPicks that is not in draftPicksBySchoolAndOwner.
@@ -430,11 +437,19 @@ AnsiConsole.WriteLine();
 var pointChart = new BarChart();
 pointChart.Label = "[green bold underline]Draft Points[/]";
 
-foreach (var owner in ownerPoints.OrderByDescending(o => o.Points).ToList())
+var ownerPointsList = ownerPoints.OrderByDescending(o => o.Points).ToList();
+foreach (var owner in ownerPointsList)
 {
     pointChart.AddItem(owner.Owner, owner.Points, Color.Green);
 }
-AnsiConsole.Write(pointChart);
+if (ownerPointsList.Count > 0)
+{
+    AnsiConsole.Write(pointChart);
+}
+else
+{
+    AnsiConsole.Write("No points yet.  Either we suck or the draft hasn't started yet.");
+}
 AnsiConsole.WriteLine();
 
 int GetLeagifyPoints(int round, int pickInRound, bool traded)
