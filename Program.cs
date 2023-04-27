@@ -349,7 +349,7 @@ foreach (var school in draftPicksBySchoolAndOwnerSortedByDifference)
 
 AnsiConsole.Write(differenceTable);
 // Write results to CSV
-string differenceTableFileName  = $"leagify-result-stats{Path.DirectorySeparatorChar}{draftYear}{Path.DirectorySeparatorChar}{draftYear}DifferenceTable.csv";
+string differenceTableFileName  = $"leagify-result-stats{Path.DirectorySeparatorChar}{draftYear}{Path.DirectorySeparatorChar}{draftYear}LeagifySchoolStats.csv";
 using (var stream = new StreamWriter(differenceTableFileName))
 using (var csv = new CsvWriter(stream, CultureInfo.InvariantCulture))
 {
