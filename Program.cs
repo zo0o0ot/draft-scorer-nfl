@@ -380,11 +380,48 @@ var playersNotMatching = from d in actualDraftPicksVerified
 
 AnsiConsole.MarkupLine(":abacus: Players not matching up to owners... :abacus:");
 
+// Create list of "Nobody schools" for CSV.
+IDictionary<string, int> nobodySchoolDictionary = new Dictionary<string, int>();
+
 foreach (var player in playersNotMatching)
 {
     AnsiConsole.Write(new Markup($"Pick [bold yellow]{player.Pick}[/]: :american_football:[red]{player.Player}[/]:american_football: from [bold yellow]{player.School}[/] gives [lime]{player.LeagifyPoints}[/] points to :thumbs_down:[fuchsia]No One[/]:thumbs_down:\n"));
+    
+    //update dictionary of nobody schools
+    if(!nobodySchoolDictionary.ContainsKey(player.School))
+    {
+        nobodySchoolDictionary[player.School] = player.LeagifyPoints;
+    }
+    else
+    {   
+        nobodySchoolDictionary[player.School] += player.LeagifyPoints;
+    }
+
 }
 AnsiConsole.WriteLine();
+
+var nobodySchoolsList = new List<NobodySchools>();
+foreach (var nbs in nobodySchoolDictionary)
+{
+    NobodySchools school = new NobodySchools {School = nbs.Key, Points = nbs.Value};
+    nobodySchoolsList.Add(school);
+}
+if (nobodySchoolsList.Count > 0)
+{
+    // Sort values by points
+    List<NobodySchools> SortedListOfNobodySchools = nobodySchoolsList.OrderByDescending(s=>s.Points).ToList();
+    // Write results to CSV
+    string schoolsNotMatchingFileName  = $"leagify-result-stats{Path.DirectorySeparatorChar}{draftYear}{Path.DirectorySeparatorChar}{draftYear}NobodySchools.csv";
+    using (var stream = new StreamWriter(schoolsNotMatchingFileName))
+    using (var csv = new CsvWriter(stream, CultureInfo.InvariantCulture))
+    {
+        csv.WriteRecords(SortedListOfNobodySchools);
+    }
+}
+
+                          
+
+
 AnsiConsole.MarkupLine(":abacus: Scoring the draft... :abacus:");
 AnsiConsole.WriteLine();
 foreach (var pick in ownerPicks)
@@ -617,4 +654,11 @@ public class SchoolStats
     public float PerformanceRatio { get; set; }
     public float PointsPerDollar { get; set; }
 
+}
+
+public class NobodySchools
+{
+    public string School { get; set; }
+    //public int Projected { get; set; }
+    public int Points { get; set; }
 }
