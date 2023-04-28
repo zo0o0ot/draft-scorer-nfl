@@ -1,33 +1,13 @@
 Player,Bid,ProjectedPoints,Difference,Owner
-Georgia,70,188,188,Ross
-Ohio State,80,152,152,Netten
-Florida,55,106,106,Jared
-Clemson,58,96,96,Jared
-Tennessee,40,89,89,Tilo
-TCU,45,87,87,Netten
-Iowa,45,80,80,Tilo
 LSU,39,75,75,Tilo
-Michigan,56,75,75,Jawad
-USC,45,72,72,Jared
 Penn State,37,68,68,Jawad
 Notre Dame,32,67,67,Tilo
-Maryland,33,66,66,AJ
-Oklahoma,32,62,62,Jawad
-Pitt,25,62,62,Netten
-Texas,27,62,62,AJ
-Illinois,25,62,62,Tilo
-Northwestern,21,61,61,AJ
-Oregon,30,60,60,Netten
-Utah,24,58,58,AJ
 Kentucky,24,48,48,AJ
 Auburn,20,48,48,AJ
 South Carolina,10,46,46,Jawad
-Kansas State,14,43,43,Jawad
 Texas A&M,12,42,42,Jared
 UCLA,11,41,41,AJ
 Arkansas,12,39,39,Jawad
-Iowa State,11,37,37,Ross
-Texas Tech,13,37,37,Ross
 Louisville,14,36,36,AJ
 Syracuse,10,36,36,Jawad
 Wisconsin,11,35,35,Jared
@@ -36,11 +16,9 @@ Minnesota,7,34,34,Jared
 Stanford,10,33,33,Jawad
 Cincinnati,14,32,32,AJ
 Ole Miss,9,30,30,Jawad
-Mississippi State,12,29,29,Netten
 North Carolina,7,28,28,Tilo
 Baylor,8,27,27,Jared
 Miami (FL),12,27,27,AJ
-Boston College,3,27,27,Netten
 North Dakota State,8,27,27,Jawad
 BYU,8,25,25,Tilo
 Purdue,9,23,23,Ross
