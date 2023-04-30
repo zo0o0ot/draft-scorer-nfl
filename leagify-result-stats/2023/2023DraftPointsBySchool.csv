@@ -1,52 +1,59 @@
 School,LeagifyPoints,Bid,ProjectedPoints,Difference,Owner
-Alabama,225,71,191,34,Ross
-Georgia,130,70,188,-58,Ross
+Alabama,257,71,191,66,Ross
+Georgia,212,70,188,24,Ross
+Ohio State,134,80,152,-18,Netten
+Florida,126,55,106,20,Jared
 Tennessee,125,40,89,36,Tilo
-Ohio State,120,80,152,-32,Netten
+Penn State,123,37,68,55,Jawad
 Iowa,120,45,80,40,Tilo
-Penn State,100,37,68,32,Jawad
-Illinois,85,25,62,23,Tilo
-Oklahoma,80,32,62,18,Jawad
-Florida,75,55,106,-31,Jared
-Clemson,70,58,96,-26,Jared
-Michigan,65,56,75,-10,Jawad
-Oregon,60,30,60,0,Netten
-USC,60,45,72,-12,Jared
-Kansas State,55,14,43,12,Jawad
-TCU,55,45,87,-32,Netten
-Notre Dame,50,32,67,-17,Tilo
+LSU,115,39,75,40,Tilo
+Michigan,115,56,75,40,Jawad
+Clemson,111,58,96,15,Jared
+Maryland,102,33,66,36,AJ
+Oregon,98,30,60,38,Netten
+TCU,98,45,87,11,Netten
+Texas,94,27,62,32,AJ
+Illinois,92,25,62,30,Tilo
+Oklahoma,92,32,62,30,Jawad
+Auburn,81,20,48,33,AJ
+Pittsburgh,77,25,62,15,Netten
+USC,75,45,72,3,Jared
+Northwestern,72,21,61,11,AJ
+Iowa State,71,11,37,34,Ross
+UCLA,67,11,41,26,AJ
+Notre Dame,66,32,67,-1,Tilo
+Purdue,63,9,23,40,Ross
+Kansas State,61,14,43,18,Jawad
+Ole Miss,59,9,30,29,Jawad
+Houston,57,2,20,37,Ross
+North Carolina,57,7,28,29,Tilo
+Wisconsin,53,11,35,18,Jared
+Utah,51,24,58,-7,AJ
 Syracuse,50,10,36,14,Jawad
-Texas,45,27,62,-17,AJ
-Iowa State,40,11,37,3,Ross
-Auburn,40,20,48,-8,AJ
+Stanford,49,10,33,16,Jawad
+Oregon State,45,7,34,11,Ross
+Cincinnati,45,14,32,13,AJ
+Miami (FL),42,12,27,15,AJ
+South Carolina,42,10,46,-4,Jawad
+Kentucky,41,24,48,-7,AJ
+Minnesota,39,7,34,5,Jared
+Mississippi State,38,12,29,9,Netten
+Wake Forest,36,1,18,18,Ross
 Texas Tech,35,13,37,-2,Ross
-Maryland,35,33,66,-31,AJ
-Utah,35,24,58,-23,AJ
-Wisconsin,35,11,35,0,Jared
-Northwestern,30,21,61,-31,AJ
-Mississippi State,30,12,29,1,Netten
-Pittsburgh,30,25,62,-32,Netten
-Kentucky,30,24,48,-18,AJ
-LSU,30,39,75,-45,Tilo
-Oregon State,30,7,34,-4,Ross
+Louisville,33,14,36,-3,AJ
+Texas A&M,32,12,42,-10,Jared
+BYU,32,8,25,7,Tilo
+Boise State,32,1,17,15,Jared
+Nebraska,32,1,13,19,Netten
+Michigan State,31,4,14,17,Ross
 Arkansas,30,12,39,-9,Jawad
 Tulane,30,2,18,12,Tilo
 Boston College,25,3,27,-2,Netten
 North Dakota State,25,8,27,-2,Jawad
-Michigan State,25,4,14,11,Ross
-Miami (FL),25,12,27,-2,AJ
-South Carolina,25,10,46,-21,Jawad
-Ole Miss,20,9,30,-10,Jawad
 Georgia Tech,20,4,22,-2,Ross
-Houston,20,2,20,0,Ross
-North Carolina,20,7,28,-8,Tilo
-Wake Forest,20,1,18,2,Ross
-Stanford,20,10,33,-13,Jawad
-Cincinnati,20,14,32,-12,AJ
-UCLA,15,11,41,-26,AJ
-Minnesota,15,7,34,-19,Jared
+Fresno State,18,1,14,4,Jared
+Virginia,17,1,13,4,Netten
 South Dakota State,10,1,15,-5,Netten
-Louisville,10,14,36,-26,AJ
-Texas A&M,10,12,42,-32,Jared
 Washington State,10,1,15,-5,Tilo
 Baylor,10,8,27,-17,Jared
+West Virginia,6,1,13,-7,Tilo
