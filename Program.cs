@@ -18,6 +18,7 @@ var generalSection = scraperConfig["General"];
 int draftYear = draftSection["DraftYear"].IntValue;
 string urlPattern = draftSection["UrlPattern"].StringValue;
 bool draftComplete = draftSection["DraftComplete"].BoolValue;
+bool updateProspects = draftSection["UpdateProspectList"].BoolValue;
 
 string apikey ="";
 try
@@ -54,11 +55,16 @@ string jsonProspects = "";
 JObject Jprospects = null;
 if(prospectsExist)
 {
-    AnsiConsole.MarkupLine(":abacus: We have a prospect list! :abacus:");
+    AnsiConsole.MarkupLine(":abacus: We have a prospect list! Checking for updates...... :abacus:");
     //stuff = JsonConvert.DeserializeObject(File.ReadAllText($"actual-draft{Path.DirectorySeparatorChar}{draftYear}{Path.DirectorySeparatorChar}{draftYear}Draft.json"));
     jsonProspects = File.ReadAllText($"actual-draft{Path.DirectorySeparatorChar}{draftYear}{Path.DirectorySeparatorChar}{draftYear}Prospects.json");
 }
 else
+{
+    AnsiConsole.MarkupLine(":abacus: We don't have a prospect list. Performing first time load...... :abacus:");
+}
+
+if (!prospectsExist || updateProspects)
 {
     //Load the prospects
     using(var client = new HttpClient())
@@ -72,7 +78,13 @@ else
         File.WriteAllText(fileName, jsonProspects);
     }
 
+    AnsiConsole.MarkupLine(":abacus: Prospect list updated. Waiting before making next API call. :abacus:");
+    // If updating prospects, wait 1.5 seconds before making the next API call. API limit is one call per second.
+    Thread.Sleep(1500);
+    AnsiConsole.MarkupLine(":abacus: OK, let's do this! :abacus:");
 }
+
+
 Jprospects = JObject.Parse(jsonProspects);
 
 JArray prospects = (JArray)Jprospects["prospects"];
