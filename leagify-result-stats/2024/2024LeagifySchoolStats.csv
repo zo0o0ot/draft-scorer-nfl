@@ -1,4 +1,5 @@
 School,Owner,Bid,Projected,Actual,Difference,PerformanceRatio,PointsPerDollar
+Oklahoma,Jawad,17,40,35,-5,0.875,2.0588236
 Toledo,Ross,8,31,25,-6,0.8064516,3.125
 Arizona,Jawad,2,37,25,-12,0.6756757,12.5
 Oregon State,Jared,10,45,30,-15,0.6666667,3
@@ -14,7 +15,7 @@ Penn State,AJ,43,115,65,-50,0.5652174,1.5116279
 Alabama,AJ,60,174,110,-64,0.6321839,1.8333334
 Washington,Jawad,76,167,100,-67,0.5988024,1.3157895
 Oregon,Ross,45,107,30,-77,0.28037384,0.6666667
+Texas,Jared,48,155,65,-90,0.41935483,1.3541666
 Florida State,Jawad,36,129,30,-99,0.23255815,0.8333333
 Georgia,Ross,68,161,60,-101,0.3726708,0.88235295
 Michigan,Netten,191,162,45,-117,0.2777778,0.2356021
-Texas,Jared,48,155,30,-125,0.19354838,0.625
