@@ -1,9 +1,11 @@
 School,Owner,Bid,Projected,Actual,Difference,PerformanceRatio,PointsPerDollar
 Rutgers,Jawad,2,17,30,13,1.7647059,15
+Western Kentucky,Jared,1,17,20,3,1.1764706,20
 Minnesota,Jared,5,28,30,2,1.0714285,6
 Florida,Netten,1,26,25,-1,0.96153843,25
 BYU,AJ,16,26,25,-1,0.96153843,1.5625
 South Carolina,Ross,7,39,35,-4,0.8974359,5
+Florida State,Jawad,36,129,125,-4,0.96899223,3.4722223
 Oklahoma,Jawad,17,40,35,-5,0.875,2.0588236
 LSU,Jared,69,131,125,-6,0.9541985,1.8115942
 Toledo,Ross,8,31,25,-6,0.8064516,3.125
@@ -13,7 +15,6 @@ West Virginia,Netten,1,23,15,-8,0.65217394,15
 Texas A&M,Jawad,14,41,30,-11,0.73170733,2.142857
 Arizona,Jawad,2,37,25,-12,0.6756757,12.5
 Kansas State,AJ,5,38,25,-13,0.65789473,5
-Florida State,Jawad,36,129,115,-14,0.8914729,3.1944444
 Texas,Jared,48,155,140,-15,0.9032258,2.9166667
 Oregon State,Jared,10,45,30,-15,0.6666667,3
 Iowa,Tilo,191,48,30,-18,0.625,0.15706806
