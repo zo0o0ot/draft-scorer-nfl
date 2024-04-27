@@ -1,6 +1,6 @@
 School,Owner,Bid,Projected,Actual,Difference,PerformanceRatio,PointsPerDollar
+Texas,Jared,48,155,201,46,1.2967741,4.1875
 Washington,Jawad,76,167,209,42,1.251497,2.75
-Texas,Jared,48,155,195,40,1.2580645,4.0625
 Florida State,Jawad,36,129,168,39,1.3023256,4.6666665
 Louisville,Jared,1,30,68,38,2.2666667,68
 Alabama,AJ,60,174,205,31,1.1781609,3.4166667
@@ -19,6 +19,7 @@ Mississippi State,Ross,3,26,40,14,1.5384616,13.333333
 Rutgers,Jawad,2,17,30,13,1.7647059,15
 Illinois,Jared,20,53,66,13,1.245283,3.3
 Kansas,Tilo,1,25,37,12,1.48,37
+USC,Jared,35,77,86,9,1.1168832,2.4571428
 South Carolina,Ross,7,39,48,9,1.2307693,6.857143
 Oregon State,Jared,10,45,54,9,1.2,5.4
 Auburn,Tilo,1,32,40,8,1.25,40
@@ -28,7 +29,6 @@ Purdue,Jawad,2,10,17,7,1.7,8.5
 Pittsburgh,Netten,1,21,27,6,1.2857143,27
 Maryland,Ross,2,21,27,6,1.2857143,13.5
 Wisconsin,Ross,1,21,26,5,1.2380953,26
-USC,Jared,35,77,80,3,1.038961,2.2857144
 Western Kentucky,Jared,1,17,20,3,1.1764706,20
 UCF,Tilo,1,21,24,3,1.1428572,24
 South Dakota State,Tilo,1,22,25,3,1.1363636,25
@@ -42,6 +42,7 @@ BYU,AJ,16,26,25,-1,0.96153843,1.5625
 UConn,Netten,1,21,20,-1,0.95238096,20
 Notre Dame,Jawad,20,83,81,-2,0.97590363,4.05
 Tulane,Netten,1,19,16,-3,0.84210527,16
+Ole Miss,Tilo,1,16,13,-3,0.8125,13
 TCU,Ross,1,29,25,-4,0.86206895,25
 Penn State,AJ,43,115,110,-5,0.95652175,2.5581396
 Oklahoma,Jawad,17,40,35,-5,0.875,2.0588236
@@ -50,10 +51,9 @@ Toledo,Ross,8,31,25,-6,0.8064516,3.125
 Western Michigan,Jawad,2,21,15,-6,0.71428573,7.5
 Houston,Netten,1,22,15,-7,0.6818182,15
 West Virginia,Netten,1,23,15,-8,0.65217394,15
-Ole Miss,Tilo,1,16,7,-9,0.4375,7
 Michigan,Netten,191,162,150,-12,0.9259259,0.7853403
+Arkansas,Netten,1,24,12,-12,0.5,12
 Iowa State,Tilo,1,21,8,-13,0.3809524,8
 Texas Tech,AJ,3,23,8,-15,0.3478261,2.6666667
 UCLA,AJ,14,53,36,-17,0.6792453,2.5714285
-Arkansas,Netten,1,24,6,-18,0.25,6
 Miami (FL),Ross,5,35,10,-25,0.2857143,2
