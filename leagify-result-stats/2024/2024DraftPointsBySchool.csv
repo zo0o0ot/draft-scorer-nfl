@@ -1,9 +1,9 @@
 School,LeagifyPoints,Bid,ProjectedPoints,Difference,Owner
 Washington,209,76,167,42,Jawad
+Alabama,189,60,174,15,AJ
 Texas,189,48,155,34,Jared
-Alabama,173,60,174,-1,AJ
+Florida State,168,36,129,39,Jawad
 Georgia,162,68,161,1,Ross
-Florida State,152,36,129,23,Jawad
 Michigan,150,191,162,-12,Netten
 LSU,143,69,131,12,Jared
 Penn State,110,43,115,-5,AJ
@@ -14,10 +14,10 @@ Notre Dame,81,20,83,-2,Jawad
 USC,80,35,77,3,Jared
 Ohio State,75,29,81,-6,AJ
 Iowa,72,191,48,24,Tilo
+Illinois,66,20,53,13,Jared
 Texas A&M,65,14,41,24,Jawad
 Duke,62,5,44,18,AJ
 North Carolina,61,18,61,0,AJ
-Illinois,60,20,53,7,Jared
 Utah,59,9,37,22,Jared
 Oregon State,54,10,45,9,Jared
 Louisville,52,1,30,22,Jared
