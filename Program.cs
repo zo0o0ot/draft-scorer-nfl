@@ -485,8 +485,13 @@ var ownerPicksByRoundAndOwner = ownerPicks.GroupBy(o => new {
 }).Select(o => new {
     Round = o.Key.Round,
     Owner = o.Key.Owner,
-    NumberOfPicks = o.Count()
+    NumberOfPicks = o.Count() 
 });
+
+var leagifyPointsByRoundAndOwner = ownerPicks.GroupBy(o => new { o.Owner, o.Round}).Select(o => new {
+    Owner = o.Key,
+    Points = o.Sum(p => p.LeagifyPoints)
+}).ToList();
 
 // change ownerPicksByRoundAndOwner to an arrayList starting with the owner name followed by the number of picks in each round
 var ownerPicksByRoundAndOwnerArray = ownerPicksByRoundAndOwner.Select(o => new {
@@ -509,16 +514,22 @@ var justTheOwners = ownerPicksByRoundAndOwner.Select(o => new {
 // string[] Jawad = new string[8];
 
 Dictionary<string, int[]> picksForTable = new Dictionary<string, int[]>();
+Dictionary<string, int[]> picksForTable2 = new Dictionary<string, int[]>();
 foreach (var owner in justTheOwners)
 {
     picksForTable.Add(owner.Owner, new int[7]);
+    picksForTable2.Add(owner.Owner, new int[7]);
 }
 foreach (var pickResult in ownerPicksByRoundAndOwnerArray)
 {
     picksForTable[pickResult.Owner][(int)pickResult.Round - 1] = pickResult.NumberOfPicks;
     AnsiConsole.Write(new Markup ($"[fuchsia]{pickResult.Owner}[/] has [fuchsia]{pickResult.NumberOfPicks}[/] picks in round [fuchsia]{pickResult.Round}[/]\n"));
 }
-
+foreach (var pickResult in leagifyPointsByRoundAndOwner)
+{
+    picksForTable2[pickResult.Owner.Owner][(int)pickResult.Owner.Round - 1] = pickResult.Points;
+    AnsiConsole.Write(new Markup ($"[fuchsia]{pickResult.Owner.Owner}[/] has [fuchsia]{pickResult.Points}[/] points in round [fuchsia]{pickResult.Owner.Round}[/]\n"));
+}
 // Output results of ownerPicksByRoundAndOwner to a Spectre Console table
 AnsiConsole.MarkupLine(":abacus: Outputting round results to a table... :abacus:");
 // Create a Spectre Console table with fully qualified class
@@ -552,6 +563,41 @@ foreach (var owner in picksForTable)
 
 AnsiConsole.Write(roundPicksTable);
 AnsiConsole.WriteLine();
+
+// Output results of ownerPicksByRoundAndOwner to a Spectre Console table
+AnsiConsole.MarkupLine(":abacus: Outputting round point results to a table... :abacus:");
+// Create a Spectre Console table with fully qualified class
+AnsiConsole.WriteLine();
+
+var roundPicksTable2 = new Spectre.Console.Table();
+roundPicksTable2.Border(TableBorder.Double).BorderColor(ConsoleColor.Yellow);
+roundPicksTable2.AddColumn("Owner");
+roundPicksTable2.AddColumn("Round 1");
+roundPicksTable2.AddColumn("Round 2");
+roundPicksTable2.AddColumn("Round 3");
+roundPicksTable2.AddColumn("Round 4");
+roundPicksTable2.AddColumn("Round 5");
+roundPicksTable2.AddColumn("Round 6");
+roundPicksTable2.AddColumn("Round 7");
+roundPicksTable2.AddColumn("Total");
+foreach (var owner in picksForTable2)
+{
+    string[] ownerResult = {owner.Key, 
+        owner.Value[0].ToString(), 
+        owner.Value[1].ToString(), 
+        owner.Value[2].ToString(), 
+        owner.Value[3].ToString(), 
+        owner.Value[4].ToString(), 
+        owner.Value[5].ToString(), 
+        owner.Value[6].ToString(), 
+        owner.Value.Sum().ToString()};
+
+    roundPicksTable2.AddRow(ownerResult);
+}
+
+AnsiConsole.Write(roundPicksTable2);
+AnsiConsole.WriteLine();
+
 // Given ActualDraftPick objects, we can score them with a bar chart
 var pointChart = new BarChart();
 pointChart.Label = "[green bold underline]Draft Points[/]";
