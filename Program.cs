@@ -570,7 +570,7 @@ AnsiConsole.MarkupLine(":abacus: Outputting round point results to a table... :a
 AnsiConsole.WriteLine();
 
 var roundPicksTable2 = new Spectre.Console.Table();
-roundPicksTable2.Border(TableBorder.Double).BorderColor(ConsoleColor.Yellow);
+roundPicksTable2.Border(TableBorder.Double).BorderColor(ConsoleColor.Blue);
 roundPicksTable2.AddColumn("Owner");
 roundPicksTable2.AddColumn("Round 1");
 roundPicksTable2.AddColumn("Round 2");
