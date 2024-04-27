@@ -1,7 +1,8 @@
 School,Owner,Bid,Projected,Actual,Difference,PerformanceRatio,PointsPerDollar
-Florida State,Jawad,36,129,183,54,1.4186046,5.0833335
+Florida State,Jawad,36,129,188,59,1.4573643,5.2222223
 Washington,Jawad,76,167,214,47,1.2814372,2.8157895
 Texas,Jared,48,155,201,46,1.2967741,4.1875
+Michigan,Netten,191,162,200,38,1.2345679,1.0471205
 Louisville,Jared,1,30,68,38,2.2666667,68
 Utah,Jared,9,37,74,37,2,8.222222
 USC,Jared,35,77,111,34,1.4415585,3.1714287
@@ -13,7 +14,6 @@ Texas A&M,Jawad,14,41,65,24,1.5853659,4.642857
 Tennessee,Jared,2,27,50,23,1.8518518,25
 Pittsburgh,Netten,1,21,42,21,2,42
 Oregon,Ross,45,107,126,19,1.1775701,2.8
-Michigan,Netten,191,162,180,18,1.1111112,0.9424084
 Missouri,Jawad,26,84,102,18,1.2142857,3.9230769
 Duke,AJ,5,44,62,18,1.4090909,12.4
 Kentucky,AJ,7,36,54,18,1.5,7.714286
@@ -25,6 +25,7 @@ Mississippi State,Ross,3,26,40,14,1.5384616,13.333333
 Rutgers,Jawad,2,17,30,13,1.7647059,15
 Illinois,Jared,20,53,66,13,1.245283,3.3
 Kansas,Tilo,1,25,37,12,1.48,37
+Purdue,Jawad,2,10,22,12,2.2,11
 Ole Miss,Tilo,1,16,28,12,1.75,28
 Penn State,AJ,43,115,126,11,1.0956522,2.9302325
 Miami (FL),Ross,5,35,45,10,1.2857143,9
@@ -33,7 +34,6 @@ South Carolina,Ross,7,39,48,9,1.2307693,6.857143
 Oregon State,Jared,10,45,54,9,1.2,5.4
 Kansas State,AJ,5,38,45,7,1.1842105,9
 North Carolina State,Tilo,1,29,36,7,1.2413793,36
-Purdue,Jawad,2,10,17,7,1.7,8.5
 Maryland,Ross,2,21,27,6,1.2857143,13.5
 Wisconsin,Ross,1,21,26,5,1.2380953,26
 Notre Dame,Jawad,20,83,86,3,1.0361446,4.3
