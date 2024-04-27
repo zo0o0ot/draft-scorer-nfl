@@ -2,18 +2,19 @@ School,Owner,Bid,Projected,Actual,Difference,PerformanceRatio,PointsPerDollar
 Washington,Jawad,76,167,209,42,1.251497,2.75
 Texas,Jared,48,155,195,40,1.2580645,4.0625
 Florida State,Jawad,36,129,168,39,1.3023256,4.6666665
+Louisville,Jared,1,30,68,38,2.2666667,68
+Alabama,AJ,60,174,205,31,1.1781609,3.4166667
 LSU,Jared,69,131,159,28,1.2137405,2.3043478
 Clemson,Ross,35,77,103,26,1.3376623,2.942857
 Iowa,Tilo,191,48,72,24,1.5,0.37696335
 Texas A&M,Jawad,14,41,65,24,1.5853659,4.642857
-Louisville,Jared,1,30,52,22,1.7333333,52
 Utah,Jared,9,37,59,22,1.5945946,6.5555553
 Oregon,Ross,45,107,126,19,1.1775701,2.8
 Missouri,Jawad,26,84,102,18,1.2142857,3.9230769
 Duke,AJ,5,44,62,18,1.4090909,12.4
 Georgia,Ross,68,161,178,17,1.1055901,2.6176472
-Alabama,AJ,60,174,189,15,1.0862069,3.15
 Washington State,Tilo,1,28,42,14,1.5,42
+Mississippi State,Ross,3,26,40,14,1.5384616,13.333333
 Rutgers,Jawad,2,17,30,13,1.7647059,15
 Illinois,Jared,20,53,66,13,1.245283,3.3
 Kansas,Tilo,1,25,37,12,1.48,37
@@ -29,6 +30,7 @@ Maryland,Ross,2,21,27,6,1.2857143,13.5
 Wisconsin,Ross,1,21,26,5,1.2380953,26
 USC,Jared,35,77,80,3,1.038961,2.2857144
 Western Kentucky,Jared,1,17,20,3,1.1764706,20
+UCF,Tilo,1,21,24,3,1.1428572,24
 South Dakota State,Tilo,1,22,25,3,1.1363636,25
 Minnesota,Jared,5,28,30,2,1.0714285,6
 Arizona,Jawad,2,37,39,2,1.054054,19.5
@@ -38,8 +40,6 @@ Florida,Netten,1,26,25,-1,0.96153843,25
 BYU,AJ,16,26,25,-1,0.96153843,1.5625
 UConn,Netten,1,21,20,-1,0.95238096,20
 Notre Dame,Jawad,20,83,81,-2,0.97590363,4.05
-Mississippi State,Ross,3,26,24,-2,0.9230769,8
-UCF,Tilo,1,21,18,-3,0.85714287,18
 Tulane,Netten,1,19,16,-3,0.84210527,16
 TCU,Ross,1,29,25,-4,0.86206895,25
 Penn State,AJ,43,115,110,-5,0.95652175,2.5581396
