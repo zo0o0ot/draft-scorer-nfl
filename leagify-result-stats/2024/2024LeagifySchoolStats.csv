@@ -9,6 +9,7 @@ USC,Jared,35,77,111,34,1.4415585,3.1714287
 Alabama,AJ,60,174,205,31,1.1781609,3.4166667
 LSU,Jared,69,131,159,28,1.2137405,2.3043478
 Clemson,Ross,35,77,103,26,1.3376623,2.942857
+South Carolina,Ross,7,39,63,24,1.6153846,9
 Iowa,Tilo,191,48,72,24,1.5,0.37696335
 Texas A&M,Jawad,14,41,65,24,1.5853659,4.642857
 Tennessee,Jared,2,27,50,23,1.8518518,25
@@ -31,7 +32,6 @@ Purdue,Jawad,2,10,22,12,2.2,11
 Ole Miss,Tilo,1,16,28,12,1.75,28
 Miami (FL),Ross,5,35,45,10,1.2857143,9
 Michigan State,Tilo,1,5,15,10,3,15
-South Carolina,Ross,7,39,48,9,1.2307693,6.857143
 Oregon State,Jared,10,45,54,9,1.2,5.4
 North Carolina State,Tilo,1,29,36,7,1.2413793,36
 Maryland,Ross,2,21,27,6,1.2857143,13.5
