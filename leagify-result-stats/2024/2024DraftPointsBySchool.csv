@@ -3,9 +3,9 @@ Washington,175,76,167,8,Jawad
 Alabama,165,60,174,-9,AJ
 Georgia,145,68,161,-16,Ross
 Texas,140,48,155,-15,Jared
+Florida State,135,36,129,6,Jawad
 Michigan,125,191,162,-37,Netten
 LSU,125,69,131,-6,Jared
-Florida State,125,36,129,-4,Jawad
 Penn State,85,43,115,-30,AJ
 USC,80,35,77,3,Jared
 Missouri,70,26,84,-14,Jawad
@@ -16,6 +16,7 @@ Ohio State,50,29,81,-31,AJ
 Oregon,50,45,107,-57,Ross
 Duke,45,5,44,1,AJ
 Kansas State,45,5,38,7,AJ
+Texas A&M,40,14,41,-1,Jawad
 North Carolina,35,18,61,-26,AJ
 Oklahoma,35,17,40,-5,Jawad
 South Carolina,35,7,39,-4,Ross
@@ -23,7 +24,6 @@ Oregon State,30,10,45,-15,Jared
 UCLA,30,14,53,-23,AJ
 Iowa,30,191,48,-18,Tilo
 Rutgers,30,2,17,13,Jawad
-Texas A&M,30,14,41,-11,Jawad
 Minnesota,30,5,28,2,Jared
 Kentucky,30,7,36,-6,AJ
 Toledo,25,8,31,-6,Ross
@@ -32,10 +32,13 @@ Florida,25,1,26,-1,Netten
 BYU,25,16,26,-1,AJ
 Utah,25,9,37,-12,Jared
 Western Kentucky,20,1,17,3,Jared
+Pittsburgh,20,1,21,-1,Netten
 UConn,20,1,21,-1,Netten
 Kansas,20,1,25,-5,Tilo
+North Carolina State,20,1,29,-9,Tilo
 West Virginia,15,1,23,-8,Netten
 Houston,15,1,22,-7,Netten
 Western Michigan,15,2,21,-6,Jawad
 TCU,10,1,29,-19,Ross
 Maryland,10,2,21,-11,Ross
+Miami (FL),10,5,35,-25,Ross
