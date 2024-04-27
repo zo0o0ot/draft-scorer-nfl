@@ -118,18 +118,44 @@ if(draftExists && draftComplete)
 }
 else
 {
-    //Load the draft
-    using(var client = new HttpClient())
+    bool draftLoaded = false;
+    int tries = 0;
+    while (!draftLoaded)
     {
-        //Send HTTP request from here.
-        client.DefaultRequestHeaders.Accept.Clear();
+        tries++;
+        string draftTry = ":abacus: Loading draft, try " + tries + ":abacus:";
+        AnsiConsole.MarkupLine(draftTry);
+        try
+        {
+            //Load the draft
+            using(var client = new HttpClient())
+            {
+                //Send HTTP request from here.
+                client.DefaultRequestHeaders.Accept.Clear();
 
-        var draftStringTask = await client.GetStringAsync($"https://api.sportradar.us/draft/nfl/trial/v1/en/{draftYear}/draft.json?api_key=" + apikey);
+                var draftStringTask = await client.GetStringAsync($"https://api.sportradar.us/draft/nfl/trial/v1/en/{draftYear}/draft.json?api_key=" + apikey);
 
-        jsonDraft = draftStringTask;
-        string fileName = $"actual-draft{Path.DirectorySeparatorChar}{draftYear}{Path.DirectorySeparatorChar}{draftYear}Draft.json"; 
-        //var Draft = JsonConvert.DeserializeObject<JToken>(jsonDraft);
-        File.WriteAllText(fileName, jsonDraft);
+                jsonDraft = draftStringTask;
+                string fileName = $"actual-draft{Path.DirectorySeparatorChar}{draftYear}{Path.DirectorySeparatorChar}{draftYear}Draft.json"; 
+                //var Draft = JsonConvert.DeserializeObject<JToken>(jsonDraft);
+                File.WriteAllText(fileName, jsonDraft);
+                draftLoaded = true;
+            }
+
+        }
+        catch
+        {
+            if (tries<4)
+            {
+                AnsiConsole.MarkupLine(":abacus: The draft is not loading. Waiting a while......:abacus:");
+                Thread.Sleep(5000);
+            }
+            else
+            {
+                AnsiConsole.MarkupLine(":abacus: Too many tries. Wait a bit and try later.:abacus:");
+            }
+        }
+
     }
 }
 draft = JObject.Parse(jsonDraft);
