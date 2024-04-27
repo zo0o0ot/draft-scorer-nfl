@@ -523,12 +523,12 @@ foreach (var owner in justTheOwners)
 foreach (var pickResult in ownerPicksByRoundAndOwnerArray)
 {
     picksForTable[pickResult.Owner][(int)pickResult.Round - 1] = pickResult.NumberOfPicks;
-    AnsiConsole.Write(new Markup ($"[fuchsia]{pickResult.Owner}[/] has [fuchsia]{pickResult.NumberOfPicks}[/] picks in round [fuchsia]{pickResult.Round}[/]\n"));
+    //AnsiConsole.Write(new Markup ($"[fuchsia]{pickResult.Owner}[/] has [fuchsia]{pickResult.NumberOfPicks}[/] picks in round [fuchsia]{pickResult.Round}[/]\n"));
 }
 foreach (var pickResult in leagifyPointsByRoundAndOwner)
 {
     picksForTable2[pickResult.Owner.Owner][(int)pickResult.Owner.Round - 1] = pickResult.Points;
-    AnsiConsole.Write(new Markup ($"[fuchsia]{pickResult.Owner.Owner}[/] has [fuchsia]{pickResult.Points}[/] points in round [fuchsia]{pickResult.Owner.Round}[/]\n"));
+    //AnsiConsole.Write(new Markup ($"[fuchsia]{pickResult.Owner.Owner}[/] has [fuchsia]{pickResult.Points}[/] points in round [fuchsia]{pickResult.Owner.Round}[/]\n"));
 }
 // Output results of ownerPicksByRoundAndOwner to a Spectre Console table
 AnsiConsole.MarkupLine(":abacus: Outputting round results to a table... :abacus:");
