@@ -1,5 +1,6 @@
 School,Owner,Bid,Projected,Actual,Difference,PerformanceRatio,PointsPerDollar
 Washington,Jawad,76,167,209,42,1.251497,2.75
+Texas,Jared,48,155,182,27,1.1741935,3.7916667
 Texas A&M,Jawad,14,41,65,24,1.5853659,4.642857
 Louisville,Jared,1,30,52,22,1.7333333,52
 Clemson,Ross,35,77,97,20,1.2597402,2.7714286
@@ -8,10 +9,10 @@ Washington State,Tilo,1,28,42,14,1.5,42
 Rutgers,Jawad,2,17,30,13,1.7647059,15
 LSU,Jared,69,131,143,12,1.091603,2.0724638
 Kansas,Tilo,1,25,37,12,1.48,37
-Texas,Jared,48,155,165,10,1.0645162,3.4375
 Iowa,Tilo,191,48,56,8,1.1666666,0.29319373
 Kansas State,AJ,5,38,45,7,1.1842105,9
 Illinois,Jared,20,53,60,7,1.1320754,3
+Purdue,Jawad,2,10,17,7,1.7,8.5
 Florida State,Jawad,36,129,135,6,1.0465117,3.75
 Utah,Jared,9,37,43,6,1.1621622,4.7777777
 Maryland,Ross,2,21,27,6,1.2857143,13.5
