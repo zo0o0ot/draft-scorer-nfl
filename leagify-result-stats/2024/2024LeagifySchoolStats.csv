@@ -7,6 +7,8 @@ Texas A&M,Jawad,14,41,48,7,1.1707317,3.4285715
 Kansas State,AJ,5,38,45,7,1.1842105,9
 Illinois,Jared,20,53,60,7,1.1320754,3
 Florida State,Jawad,36,129,135,6,1.0465117,3.75
+Utah,Jared,9,37,43,6,1.1621622,4.7777777
+Wisconsin,Ross,1,21,26,5,1.2380953,26
 USC,Jared,35,77,80,3,1.038961,2.2857144
 Oregon,Ross,45,107,110,3,1.0280374,2.4444444
 Western Kentucky,Jared,1,17,20,3,1.1764706,20
@@ -32,18 +34,19 @@ Houston,Netten,1,22,15,-7,0.6818182,15
 West Virginia,Netten,1,23,15,-8,0.65217394,15
 North Carolina State,Tilo,1,29,20,-9,0.6896552,20
 Tennessee,Jared,2,27,18,-9,0.6666667,9
+Washington State,Tilo,1,28,18,-10,0.64285713,18
+TCU,Ross,1,29,18,-11,0.62068963,18
 Maryland,Ross,2,21,10,-11,0.47619048,5
 Arizona,Jawad,2,37,25,-12,0.6756757,12.5
-Utah,Jared,9,37,25,-12,0.6756757,2.7777777
+Louisville,Jared,1,30,18,-12,0.6,18
 Ohio State,AJ,29,81,68,-13,0.83950615,2.3448277
-Wisconsin,Ross,1,21,8,-13,0.3809524,8
+Iowa State,Tilo,1,21,8,-13,0.3809524,8
 South Dakota State,Tilo,1,22,8,-14,0.36363637,8
 Oregon State,Jared,10,45,30,-15,0.6666667,3
 Texas Tech,AJ,3,23,8,-15,0.3478261,2.6666667
 Georgia,Ross,68,161,145,-16,0.9006211,2.1323528
 Mississippi State,Ross,3,26,8,-18,0.30769232,2.6666667
 Michigan,Netten,191,162,143,-19,0.88271606,0.7486911
-TCU,Ross,1,29,10,-19,0.3448276,10
 Penn State,AJ,43,115,93,-22,0.8086957,2.1627908
 Notre Dame,Jawad,20,83,60,-23,0.72289157,3
 UCLA,AJ,14,53,30,-23,0.5660377,2.142857
