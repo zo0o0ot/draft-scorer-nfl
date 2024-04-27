@@ -1,8 +1,8 @@
 School,LeagifyPoints,Bid,ProjectedPoints,Difference,Owner
 Washington,175,76,167,8,Jawad
 Alabama,173,60,174,-1,AJ
+Georgia,162,68,161,1,Ross
 Texas,148,48,155,-7,Jared
-Georgia,145,68,161,-16,Ross
 Michigan,143,191,162,-19,Netten
 LSU,143,69,131,12,Jared
 Florida State,135,36,129,6,Jawad
@@ -11,20 +11,21 @@ Penn State,93,43,115,-22,AJ
 USC,80,35,77,3,Jared
 Clemson,80,35,77,3,Ross
 Missouri,78,26,84,-6,Jawad
+Notre Dame,74,20,83,-9,Jawad
 Ohio State,68,29,81,-13,AJ
 North Carolina,61,18,61,0,AJ
-Notre Dame,60,20,83,-23,Jawad
 Illinois,60,20,53,7,Jared
 Iowa,56,191,48,8,Tilo
 Texas A&M,48,14,41,7,Jawad
+Oregon State,47,10,45,2,Jared
 Duke,45,5,44,1,AJ
 Kansas State,45,5,38,7,AJ
 Utah,43,9,37,6,Jared
 Kentucky,38,7,36,2,AJ
+Kansas,37,1,25,12,Tilo
 Oklahoma,35,17,40,-5,Jawad
 South Carolina,35,7,39,-4,Ross
 Arizona,33,2,37,-4,Jawad
-Oregon State,30,10,45,-15,Jared
 UCLA,30,14,53,-23,AJ
 Rutgers,30,2,17,13,Jawad
 Minnesota,30,5,28,2,Jared
@@ -36,7 +37,6 @@ BYU,25,16,26,-1,AJ
 Western Kentucky,20,1,17,3,Jared
 Pittsburgh,20,1,21,-1,Netten
 UConn,20,1,21,-1,Netten
-Kansas,20,1,25,-5,Tilo
 North Carolina State,20,1,29,-9,Tilo
 UCF,18,1,21,-3,Tilo
 Tennessee,18,2,27,-9,Jared

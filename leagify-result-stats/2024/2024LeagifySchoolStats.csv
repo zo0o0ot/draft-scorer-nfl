@@ -1,6 +1,7 @@
 School,Owner,Bid,Projected,Actual,Difference,PerformanceRatio,PointsPerDollar
 Rutgers,Jawad,2,17,30,13,1.7647059,15
 LSU,Jared,69,131,143,12,1.091603,2.0724638
+Kansas,Tilo,1,25,37,12,1.48,37
 Washington,Jawad,76,167,175,8,1.0479041,2.3026316
 Iowa,Tilo,191,48,56,8,1.1666666,0.29319373
 Texas A&M,Jawad,14,41,48,7,1.1707317,3.4285715
@@ -14,8 +15,10 @@ USC,Jared,35,77,80,3,1.038961,2.2857144
 Oregon,Ross,45,107,110,3,1.0280374,2.4444444
 Clemson,Ross,35,77,80,3,1.038961,2.2857144
 Western Kentucky,Jared,1,17,20,3,1.1764706,20
+Oregon State,Jared,10,45,47,2,1.0444444,4.7
 Minnesota,Jared,5,28,30,2,1.0714285,6
 Kentucky,AJ,7,36,38,2,1.0555556,5.428571
+Georgia,Ross,68,161,162,1,1.0062112,2.3823528
 Duke,AJ,5,44,45,1,1.0227273,9
 North Carolina,AJ,18,61,61,0,1,3.3888888
 Alabama,AJ,60,174,173,-1,0.99425286,2.8833334
@@ -27,13 +30,13 @@ UCF,Tilo,1,21,18,-3,0.85714287,18
 South Carolina,Ross,7,39,35,-4,0.8974359,5
 Arizona,Jawad,2,37,33,-4,0.8918919,16.5
 Oklahoma,Jawad,17,40,35,-5,0.875,2.0588236
-Kansas,Tilo,1,25,20,-5,0.8,20
 Missouri,Jawad,26,84,78,-6,0.9285714,3
 Toledo,Ross,8,31,25,-6,0.8064516,3.125
 Western Michigan,Jawad,2,21,15,-6,0.71428573,7.5
 Texas,Jared,48,155,148,-7,0.9548387,3.0833333
 Houston,Netten,1,22,15,-7,0.6818182,15
 West Virginia,Netten,1,23,15,-8,0.65217394,15
+Notre Dame,Jawad,20,83,74,-9,0.8915663,3.7
 North Carolina State,Tilo,1,29,20,-9,0.6896552,20
 Tennessee,Jared,2,27,18,-9,0.6666667,9
 Washington State,Tilo,1,28,18,-10,0.64285713,18
@@ -42,13 +45,10 @@ Louisville,Jared,1,30,18,-12,0.6,18
 Ohio State,AJ,29,81,68,-13,0.83950615,2.3448277
 Iowa State,Tilo,1,21,8,-13,0.3809524,8
 South Dakota State,Tilo,1,22,8,-14,0.36363637,8
-Oregon State,Jared,10,45,30,-15,0.6666667,3
 Auburn,Tilo,1,32,17,-15,0.53125,17
 Texas Tech,AJ,3,23,8,-15,0.3478261,2.6666667
-Georgia,Ross,68,161,145,-16,0.9006211,2.1323528
 Mississippi State,Ross,3,26,8,-18,0.30769232,2.6666667
 Michigan,Netten,191,162,143,-19,0.88271606,0.7486911
 Penn State,AJ,43,115,93,-22,0.8086957,2.1627908
-Notre Dame,Jawad,20,83,60,-23,0.72289157,3
 UCLA,AJ,14,53,30,-23,0.5660377,2.142857
 Miami (FL),Ross,5,35,10,-25,0.2857143,2
