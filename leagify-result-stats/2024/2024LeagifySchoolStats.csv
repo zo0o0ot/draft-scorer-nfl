@@ -1,9 +1,11 @@
 School,Owner,Bid,Projected,Actual,Difference,PerformanceRatio,PointsPerDollar
 Washington,Jawad,76,167,209,42,1.251497,2.75
 Texas,Jared,48,155,189,34,1.2193549,3.9375
+Iowa,Tilo,191,48,72,24,1.5,0.37696335
 Texas A&M,Jawad,14,41,65,24,1.5853659,4.642857
 Florida State,Jawad,36,129,152,23,1.1782945,4.2222223
 Louisville,Jared,1,30,52,22,1.7333333,52
+Utah,Jared,9,37,59,22,1.5945946,6.5555553
 Clemson,Ross,35,77,97,20,1.2597402,2.7714286
 Missouri,Jawad,26,84,102,18,1.2142857,3.9230769
 Duke,AJ,5,44,62,18,1.4090909,12.4
@@ -11,17 +13,15 @@ Washington State,Tilo,1,28,42,14,1.5,42
 Rutgers,Jawad,2,17,30,13,1.7647059,15
 LSU,Jared,69,131,143,12,1.091603,2.0724638
 Kansas,Tilo,1,25,37,12,1.48,37
+South Carolina,Ross,7,39,48,9,1.2307693,6.857143
 Oregon State,Jared,10,45,54,9,1.2,5.4
-Iowa,Tilo,191,48,56,8,1.1666666,0.29319373
 Kansas State,AJ,5,38,45,7,1.1842105,9
 Illinois,Jared,20,53,60,7,1.1320754,3
 Purdue,Jawad,2,10,17,7,1.7,8.5
 Pittsburgh,Netten,1,21,27,6,1.2857143,27
-Utah,Jared,9,37,43,6,1.1621622,4.7777777
 Maryland,Ross,2,21,27,6,1.2857143,13.5
 Wisconsin,Ross,1,21,26,5,1.2380953,26
 USC,Jared,35,77,80,3,1.038961,2.2857144
-South Carolina,Ross,7,39,42,3,1.0769231,6
 Oregon,Ross,45,107,110,3,1.0280374,2.4444444
 Western Kentucky,Jared,1,17,20,3,1.1764706,20
 South Dakota State,Tilo,1,22,25,3,1.1363636,25
@@ -36,6 +36,7 @@ BYU,AJ,16,26,25,-1,0.96153843,1.5625
 UConn,Netten,1,21,20,-1,0.95238096,20
 Notre Dame,Jawad,20,83,81,-2,0.97590363,4.05
 UCF,Tilo,1,21,18,-3,0.85714287,18
+Tulane,Netten,1,19,16,-3,0.84210527,16
 Arizona,Jawad,2,37,33,-4,0.8918919,16.5
 TCU,Ross,1,29,25,-4,0.86206895,25
 Penn State,AJ,43,115,110,-5,0.95652175,2.5581396
@@ -51,6 +52,6 @@ Ole Miss,Tilo,1,16,7,-9,0.4375,7
 Michigan,Netten,191,162,150,-12,0.9259259,0.7853403
 Iowa State,Tilo,1,21,8,-13,0.3809524,8
 Texas Tech,AJ,3,23,8,-15,0.3478261,2.6666667
+UCLA,AJ,14,53,36,-17,0.6792453,2.5714285
 Mississippi State,Ross,3,26,8,-18,0.30769232,2.6666667
-UCLA,AJ,14,53,30,-23,0.5660377,2.142857
 Miami (FL),Ross,5,35,10,-25,0.2857143,2
