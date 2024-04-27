@@ -1,6 +1,6 @@
 School,Owner,Bid,Projected,Actual,Difference,PerformanceRatio,PointsPerDollar
 Washington,Jawad,76,167,209,42,1.251497,2.75
-Texas,Jared,48,155,182,27,1.1741935,3.7916667
+Texas,Jared,48,155,189,34,1.2193549,3.9375
 Texas A&M,Jawad,14,41,65,24,1.5853659,4.642857
 Florida State,Jawad,36,129,152,23,1.1782945,4.2222223
 Louisville,Jared,1,30,52,22,1.7333333,52
@@ -23,6 +23,7 @@ USC,Jared,35,77,80,3,1.038961,2.2857144
 South Carolina,Ross,7,39,42,3,1.0769231,6
 Oregon,Ross,45,107,110,3,1.0280374,2.4444444
 Western Kentucky,Jared,1,17,20,3,1.1764706,20
+South Dakota State,Tilo,1,22,25,3,1.1363636,25
 Minnesota,Jared,5,28,30,2,1.0714285,6
 Kentucky,AJ,7,36,38,2,1.0555556,5.428571
 Auburn,Tilo,1,32,34,2,1.0625,34
@@ -47,10 +48,9 @@ West Virginia,Netten,1,23,15,-8,0.65217394,15
 North Carolina State,Tilo,1,29,20,-9,0.6896552,20
 Tennessee,Jared,2,27,18,-9,0.6666667,9
 Ole Miss,Tilo,1,16,7,-9,0.4375,7
+Michigan,Netten,191,162,150,-12,0.9259259,0.7853403
 Iowa State,Tilo,1,21,8,-13,0.3809524,8
-South Dakota State,Tilo,1,22,8,-14,0.36363637,8
 Texas Tech,AJ,3,23,8,-15,0.3478261,2.6666667
 Mississippi State,Ross,3,26,8,-18,0.30769232,2.6666667
-Michigan,Netten,191,162,143,-19,0.88271606,0.7486911
 UCLA,AJ,14,53,30,-23,0.5660377,2.142857
 Miami (FL),Ross,5,35,10,-25,0.2857143,2
