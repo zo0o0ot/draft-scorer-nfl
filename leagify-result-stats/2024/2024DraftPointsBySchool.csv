@@ -1,18 +1,21 @@
 School,LeagifyPoints,Bid,ProjectedPoints,Difference,Owner
-Alabama,155,60,174,-19,AJ
-Washington,145,76,167,-22,Jawad
+Washington,175,76,167,8,Jawad
+Alabama,165,60,174,-9,AJ
+Georgia,145,68,161,-16,Ross
 Texas,140,48,155,-15,Jared
-Georgia,135,68,161,-26,Ross
+Michigan,125,191,162,-37,Netten
 LSU,125,69,131,-6,Jared
 Florida State,125,36,129,-4,Jawad
-Michigan,85,191,162,-77,Netten
-Penn State,65,43,115,-50,AJ
+Penn State,85,43,115,-30,AJ
+USC,80,35,77,3,Jared
+Missouri,70,26,84,-14,Jawad
+Notre Dame,60,20,83,-23,Jawad
+Illinois,60,20,53,7,Jared
 Clemson,55,35,77,-22,Ross
-USC,50,35,77,-27,Jared
 Ohio State,50,29,81,-31,AJ
-Notre Dame,50,20,83,-33,Jawad
-Missouri,50,26,84,-34,Jawad
 Oregon,50,45,107,-57,Ross
+Duke,45,5,44,1,AJ
+Kansas State,45,5,38,7,AJ
 North Carolina,35,18,61,-26,AJ
 Oklahoma,35,17,40,-5,Jawad
 South Carolina,35,7,39,-4,Ross
@@ -22,15 +25,17 @@ Iowa,30,191,48,-18,Tilo
 Rutgers,30,2,17,13,Jawad
 Texas A&M,30,14,41,-11,Jawad
 Minnesota,30,5,28,2,Jared
+Kentucky,30,7,36,-6,AJ
 Toledo,25,8,31,-6,Ross
 Arizona,25,2,37,-12,Jawad
-Duke,25,5,44,-19,AJ
 Florida,25,1,26,-1,Netten
-Kansas State,25,5,38,-13,AJ
 BYU,25,16,26,-1,AJ
-Illinois,20,20,53,-33,Jared
+Utah,25,9,37,-12,Jared
 Western Kentucky,20,1,17,3,Jared
+UConn,20,1,21,-1,Netten
+Kansas,20,1,25,-5,Tilo
 West Virginia,15,1,23,-8,Netten
 Houston,15,1,22,-7,Netten
 Western Michigan,15,2,21,-6,Jawad
-Utah,15,9,37,-22,Jared
+TCU,10,1,29,-19,Ross
+Maryland,10,2,21,-11,Ross
