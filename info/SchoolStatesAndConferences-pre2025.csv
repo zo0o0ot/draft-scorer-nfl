@@ -1,18 +1,16 @@
 School,Conference,State
 Memphis,FBS - AAC,Tennessee
+Cincinnati,FBS - AAC,Ohio
+UCF,FBS - AAC,Florida
 East Carolina,FBS - AAC,North Carolina
+Houston,FBS - AAC,Texas
 Temple,FBS - AAC,Pennsylvania
 South Florida,FBS - AAC,Florida
 Tulane,FBS - AAC,Louisiana
 Tulsa,FBS - AAC,Oklahoma
+SMU,FBS - AAC,Texas
 Connecticut,FBS - AAC,Connecticut
 Navy,FBS - AAC,Maryland
-Charlotte,FBS - AAC,North Carolina
-Florida Atlantic,FBS - AAC,Florida
-North Texas,FBS - AAC,Texas
-Rice,FBS - AAC,Texas
-UAB,FBS - AAC,Alabama
-UTSA,FBS - AAC,Texas
 Florida State,ACC,Florida
 Clemson,ACC,South Carolina
 Louisville,ACC,Kentucky
@@ -27,20 +25,11 @@ Pittsburgh,ACC,Pennsylvania
 Virginia Tech,ACC,Virginia
 Miami (FL),ACC,Florida
 Virginia,ACC,Virginia
-SMU,ACC,Texas
-Stanford,ACC,California
-California,ACC,California
 Baylor,Big 12,Texas
-BYU,Big 12,Utah
-Cincinnati,Big 12,Ohio
-Houston,Big 12,Texas
-UCF,Big 12,Florida
-Arizona,Big 12,Arizona
-Arizona State,Big 12,Arizona
-Colorado,Big 12,Colorado
-Utah,Big 12,Utah
 TCU,Big 12,Texas
 Kansas State,Big 12,Kansas
+Oklahoma,Big 12,Oklahoma
+Texas,Big 12,Texas
 West Virginia,Big 12,West Virginia
 Oklahoma State,Big 12,Oklahoma
 Texas Tech,Big 12,Texas
@@ -60,20 +49,24 @@ Iowa,Big Ten,Iowa
 Illinois,Big Ten,Illinois
 Northwestern,Big Ten,Illinois
 Purdue,Big Ten,Indiana
-Oregon,Big Ten,Oregon
-UCLA,Big Ten,California
-USC,Big Ten,California
-Washington,Big Ten,Washington
+Oregon,Pac 12,Oregon
+Stanford,Pac 12,California
+Washington,Pac 12,Washington
+California,Pac 12,California
 Washington State,Pac 12,Washington
 Oregon State,Pac 12,Oregon
+Arizona,Pac 12,Arizona
+UCLA,Pac 12,California
+Arizona State,Pac 12,Arizona
+USC,Pac 12,California
+Utah,Pac 12,Utah
+Colorado,Pac 12,Colorado
 Missouri,SEC,Missouri
 Georgia,SEC,Georgia
 Florida,SEC,Florida
 Tennessee,SEC,Tennessee
 South Carolina,SEC,South Carolina
 Kentucky,SEC,Kentucky
-Oklahoma,SEC,Oklahoma
-Texas,SEC,Texas
 Vanderbilt,SEC,Tennessee
 Alabama,SEC,Alabama
 Mississippi State,SEC,Mississippi
@@ -95,20 +88,22 @@ Air Force,FBS - Mountain West,Colorado
 New Mexico,FBS - Mountain West,New Mexico
 Wyoming,FBS - Mountain West,Wyoming
 Notre Dame,FBS - Independent,Indiana
+BYU,FBS - Independent,Utah
 Army,FBS - Independent,Kansas
 Marshall,FBS - CUSA,West Virginia
-Middle Tennessee State,FBS - CUSA,Tennessee
+Middle Tennessee,FBS - CUSA,Tennessee
+UAB,FBS - CUSA,Alabama
 Western Kentucky,FBS - CUSA,Kentucky
 Old Dominion,FBS - CUSA,Virginia
 Florida International,FBS - CUSA,Florida
+Florida Atlantic,FBS - CUSA,Florida
+Charlotte,FBS - CUSA,North Carolina
 Louisiana Tech,FBS - CUSA,Louisiana
+Rice,FBS - CUSA,Texas
 UTEP,FBS - CUSA,Texas
+UTSA,FBS - CUSA,Texas
+North Texas,FBS - CUSA,Texas
 Southern Miss,FBS - CUSA,Mississippi
-Jacksonville State,FBS - CUSA,Alabama
-Liberty,FBS - CUSA,Virginia
-New Mexico State,FBS - CUSA,New Mexico
-Sam Houston State,FBS - CUSA,Texas
-Kennesaw State,FBS - CUSA,Georgia
 Bowling Green,FBS - MAC,Ohio
 Ohio,FBS - MAC,Ohio
 Buffalo,FBS - MAC,New York
@@ -130,9 +125,9 @@ Arkansas State,FBS - Sun Belt,Arkansas
 South Alabama,FBS - Sun Belt,Alabama
 Louisiana-Monroe,FBS - Sun Belt,Louisiana
 Troy,FBS - Sun Belt,Alabama
+New Mexico State,FBS - Sun Belt,New Mexico
 Idaho,FBS - Sun Belt,Idaho
 Georgia State,FBS - Sun Belt,Georgia
-James Madison,FBS - Sun Belt,Virginia
 Abilene Christian,FCS,Texas
 Alabama A&M,FCS,Alabama
 Alabama State,FCS,Alabama
@@ -184,9 +179,12 @@ Incarnate Word,FCS,Texas
 Indiana State,FCS,Indiana
 Jackson State,FCS,Mississippi
 Jacksonville,FCS,Florida
+Jacksonville State,FCS,Alabama
+James Madison,FCS,Virginia
 Lafayette,FCS,Pennsylvania
 Lamar,FCS,Texas
 Lehigh,FCS,Pennsylvania
+Liberty,FCS,Virginia
 Maine,FCS,Maine
 McNeese State,FCS,Louisiana
 Mercer,FCS,Georgia
@@ -220,6 +218,7 @@ Robert Morris,FCS,Pennsylvania
 Sacramento State,FCS,California
 Sacred Heart,FCS,Connecticut
 Saint Francis,FCS,Pennsylvania
+Sam Houston State,FCS,Texas
 Samford,FCS,Alabama
 San Diego,FCS,California
 Savannah State,FCS,Georgia
@@ -340,7 +339,6 @@ Minnesota State–Mankato,D2,Minnesota
 Minnesota State–Moorhead,D2,Minnesota
 Minnesota–Crookston,D2,Minnesota
 Minnesota–Duluth,D2,Minnesota
-Minnesota Duluth,D2,Minnesota
 Minot State,D2,North Dakota
 Mississippi College,D2,Mississippi
 Missouri S&T,D2,Missouri
@@ -363,7 +361,6 @@ Northwood,D2,Michigan
 Notre Dame College,D2,Ohio
 Ohio Dominican,D2,Ohio
 Oklahoma Panhandle State,D2,Oklahoma
-Oklahoma Baptist,D2,Oklahoma
 Ouachita Baptist,D2,Arkansas
 Pace,D2,New York
 Paine College,D2,Georgia
@@ -394,7 +391,6 @@ Stillman College,D2,Alabama
 Stonehill College,D2,Massachusetts
 Tarleton State,D2,Texas
 Texas A&M–Commerce,D2,Texas
-Texas A&M-Commerce,D2,Texas
 Texas A&M–Kingsville,D2,Texas
 Tiffin,D2,Ohio
 Truman State,D2,Missouri
@@ -412,7 +408,6 @@ Wayne State,D2,Michigan
 Wayne State College,D2,Nebraska
 West Alabama,D2,Alabama
 West Chester,D2,Pennsylvania
-West Florida,D2,Florida
 West Georgia,D2,Georgia
 West Liberty,D2,West Virginia
 West Texas A&M,D2,Texas
@@ -481,7 +476,6 @@ Concordia (WI),D3,Wisconsin
 Cornell College,D3,Iowa
 Cortland State,D3,New York
 Crown,D3,Minnesota
-Culver Stockton College,D3,Ohio
 Curry,D3,Massachusetts
 Defiance,D3,Ohio
 Delaware Valley,D3,Pennsylvania
@@ -568,6 +562,7 @@ Millikin,D3,Illinois
 Millsaps,D3,Mississippi
 Minnesota-Morris,D3,Minnesota
 Misericordia,D3,Pennsylvania
+Mississippi College,D3,Mississippi
 MIT,D3,Massachusetts
 Monmouth (IL),D3,Illinois
 Montclair State,D3,New Jersey
@@ -640,7 +635,7 @@ UW–Platteville,D3,Wisconsin
 UW–River Falls,D3,Wisconsin
 UW–Stevens Point,D3,Wisconsin
 UW–Stout,D3,Wisconsin
-UW–Whitewater,D3,Wisconsin
+UW-Whitewater,D3,Wisconsin
 Wabash,D3,Indiana
 Wartburg,D3,Iowa
 Washington & Jefferson,D3,Pennsylvania
@@ -651,7 +646,6 @@ Wesley,D3,Delaware
 Wesleyan,D3,Connecticut
 Western Connecticut,D3,Connecticut
 Western New England,D3,Massachusetts
-Western Ontario,D3,Ontario
 Westfield State,D3,Massachusetts
 Westminster (MO),D3,Missouri
 Westminster (PA),D3,Pennsylvania
@@ -669,11 +663,3 @@ Wittenberg,D3,Ohio
 Wooster,D3,Ohio
 Worcester Poly,D3,Massachusetts
 Worcester State,D3,Massachusetts
-Stuttgart,D3,Germany
-Baldwin Wallace,D3,Ohio
-Toronto,D3,Canada
-Lackawanna,D3,Pennsylvania
-British Columbia,D3,Canada
-Cortland,D3,New York
-Wisconsin-Platteville,D3,Wisconsin
-Wilfrid Laurier,D3,Canada
