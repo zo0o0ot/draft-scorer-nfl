@@ -27,12 +27,13 @@ Auburn,Netten,1,19,25,6,1.3157895,25
 North Dakota State,Netten,60,25,30,5,1.2,0.5
 Colorado State,Tilo,2,12,17,5,1.4166666,8.5
 Arkansas,Jared,3,36,40,4,1.1111112,13.333333
+Ole Miss,Jared,40,144,146,2,1.0138888,3.65
 Notre Dame,Jawad,25,75,77,2,1.0266666,3.08
+Syracuse,Ross,3,32,33,1,1.03125,11
 Texas Tech,Netten,4,20,20,0,1,5
 Purdue,Tilo,1,17,17,0,1,17
 West Virginia,Ross,1,22,20,-2,0.90909094,20
 Bowling Green,Netten,1,12,10,-2,0.8333333,10
-Ole Miss,Jared,40,144,140,-4,0.9722222,3.5
 Minnesota,Jared,7,44,40,-4,0.90909094,5.714286
 Kentucky,Jawad,1,47,43,-4,0.9148936,43
 Stanford,Jawad,1,22,18,-4,0.8181818,18
@@ -45,7 +46,6 @@ East Carolina,Ross,1,20,10,-10,0.5,10
 Indiana,Jawad,1,20,8,-12,0.4,8
 Toledo,AJ,7,24,10,-14,0.41666666,1.4285715
 Penn State,AJ,44,100,85,-15,0.85,1.9318181
-Syracuse,Ross,3,32,17,-15,0.53125,5.6666665
 Marshall,Jared,7,30,15,-15,0.5,2.142857
 Clemson,Netten,40,24,8,-16,0.33333334,0.2
 Florida State,AJ,10,46,28,-18,0.6086956,2.8
