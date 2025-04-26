@@ -1,15 +1,16 @@
 School,Owner,Bid,Projected,Actual,Difference,PerformanceRatio,PointsPerDollar
+Maryland,Ross,2,29,72,43,2.4827585,36
+Oregon,Jared,55,116,154,38,1.3275862,2.8
 Alabama,AJ,40,95,121,26,1.2736843,3.025
 Iowa State,Jared,16,52,78,26,1.5,4.875
-Maryland,Ross,2,29,55,26,1.8965517,27.5
 Georgia,Ross,69,160,183,23,1.14375,2.652174
 Louisville,AJ,6,35,58,23,1.6571429,9.666667
-Oregon,Jared,55,116,137,21,1.1810344,2.490909
 USC,Netten,12,17,38,21,2.235294,3.1666667
 UCF,Ross,1,22,42,20,1.9090909,42
 Texas A&M,Ross,10,65,80,15,1.2307693,8
 California,Tilo,1,21,36,15,1.7142857,36
 South Carolina,AJ,40,89,101,12,1.1348314,2.525
+Florida,Jared,3,37,49,12,1.3243244,16.333334
 Tennessee,Tilo,25,65,76,11,1.1692308,3.04
 Ohio State,Ross,70,225,236,11,1.0488889,3.3714285
 Illinois,Netten,40,9,20,11,2.2222223,0.5
@@ -20,6 +21,7 @@ North Dakota State,Netten,60,25,30,5,1.2,0.5
 Arkansas,Jared,3,36,40,4,1.1111112,13.333333
 Boston College,Jared,5,42,45,3,1.0714285,9
 Texas Tech,Netten,4,20,20,0,1,5
+Purdue,Tilo,1,17,17,0,1,17
 Auburn,Netten,1,19,18,-1,0.94736844,18
 West Virginia,Ross,1,22,20,-2,0.90909094,20
 Bowling Green,Netten,1,12,10,-2,0.8333333,10
@@ -31,14 +33,13 @@ Oklahoma,Netten,40,21,16,-5,0.7619048,0.4
 Nebraska,AJ,3,24,18,-6,0.75,6
 LSU,Ross,31,109,102,-7,0.9357798,3.2903225
 Boise State,Jawad,27,42,35,-7,0.8333333,1.2962962
+Kansas State,Jawad,2,24,17,-7,0.7083333,8.5
 Michigan,Jawad,140,148,140,-8,0.9459459,1
 Missouri,Jared,12,73,65,-8,0.89041096,5.4166665
 East Carolina,Ross,1,20,10,-10,0.5,10
-Florida,Jared,3,37,25,-12,0.6756757,8.333333
 Oklahoma State,Jawad,1,22,10,-12,0.45454547,10
 Indiana,Jawad,1,20,8,-12,0.4,8
 Toledo,AJ,7,24,10,-14,0.41666666,1.4285715
-Kansas State,Jawad,2,24,10,-14,0.41666666,5
 Penn State,AJ,44,100,85,-15,0.85,1.9318181
 Notre Dame,Jawad,25,75,60,-15,0.8,2.4
 Marshall,Jared,7,30,15,-15,0.5,2.142857
@@ -47,6 +48,6 @@ Florida State,AJ,10,46,28,-18,0.6086956,2.8
 Ole Miss,Jared,40,144,123,-21,0.8541667,3.075
 Colorado,Tilo,35,84,62,-22,0.7380952,1.7714286
 North Carolina,AJ,10,47,25,-22,0.5319149,2.5
-Miami (FL),Jared,32,89,55,-34,0.6179775,1.71875
-Texas,Tilo,69,202,161,-41,0.7970297,2.3333333
+Miami (FL),Jared,32,89,62,-27,0.6966292,1.9375
+Texas,Tilo,69,202,168,-34,0.83168316,2.4347825
 Iowa,Tilo,32,55,10,-45,0.18181819,0.3125

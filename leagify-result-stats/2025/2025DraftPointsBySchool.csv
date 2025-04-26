@@ -1,9 +1,9 @@
 School,LeagifyPoints,Bid,ProjectedPoints,Difference,Owner
 Ohio State,236,70,225,11,Ross
 Georgia,183,69,160,23,Ross
-Texas,161,69,202,-41,Tilo
+Texas,168,69,202,-34,Tilo
+Oregon,154,55,116,38,Jared
 Michigan,140,140,148,-8,Jawad
-Oregon,137,55,116,21,Jared
 Ole Miss,123,40,144,-21,Jared
 Alabama,121,40,95,26,AJ
 LSU,102,31,109,-7,Ross
@@ -12,13 +12,14 @@ Penn State,85,44,100,-15,AJ
 Texas A&M,80,10,65,15,Ross
 Iowa State,78,16,52,26,Jared
 Tennessee,76,25,65,11,Tilo
+Maryland,72,2,29,43,Ross
 Missouri,65,12,73,-8,Jared
 Arizona,65,20,57,8,AJ
 Colorado,62,35,84,-22,Tilo
+Miami (FL),62,32,89,-27,Jared
 Notre Dame,60,25,75,-15,Jawad
 Louisville,58,6,35,23,AJ
-Miami (FL),55,32,89,-34,Jared
-Maryland,55,2,29,26,Ross
+Florida,49,3,37,12,Jared
 UCLA,45,11,37,8,AJ
 Boston College,45,5,42,3,Jared
 Kentucky,43,1,47,-4,Jawad
@@ -33,13 +34,14 @@ TCU,35,2,28,7,Ross
 North Dakota State,30,60,25,5,Netten
 Florida State,28,10,46,-18,AJ
 North Carolina,25,10,47,-22,AJ
-Florida,25,3,37,-12,Jared
 Illinois,20,40,9,11,Netten
 West Virginia,20,1,22,-2,Ross
 Texas Tech,20,4,20,0,Netten
 Nebraska,18,3,24,-6,AJ
 Auburn,18,1,19,-1,Netten
 Stanford,18,1,22,-4,Jawad
+Purdue,17,1,17,0,Tilo
+Kansas State,17,2,24,-7,Jawad
 Oklahoma,16,40,21,-5,Netten
 Marshall,15,7,30,-15,Jared
 Toledo,10,7,24,-14,AJ
@@ -47,6 +49,5 @@ Bowling Green,10,1,12,-2,Netten
 Oklahoma State,10,1,22,-12,Jawad
 East Carolina,10,1,20,-10,Ross
 Iowa,10,32,55,-45,Tilo
-Kansas State,10,2,24,-14,Jawad
 Indiana,8,1,20,-12,Jawad
 Clemson,8,40,24,-16,Netten
