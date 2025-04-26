@@ -1,19 +1,20 @@
 School,LeagifyPoints,Bid,ProjectedPoints,Difference,Owner
-Ohio State,193,70,225,-32,Ross
+Ohio State,219,70,225,-6,Ross
 Georgia,166,69,160,6,Ross
+Texas,161,69,202,-41,Tilo
 Michigan,140,140,148,-8,Jawad
-Texas,135,69,202,-67,Tilo
+Alabama,121,40,95,26,AJ
 Oregon,120,55,116,4,Jared
 Ole Miss,115,40,144,-29,Jared
+South Carolina,101,40,89,12,AJ
 Penn State,85,44,100,-15,AJ
 LSU,85,31,109,-24,Ross
-Alabama,85,40,95,-10,AJ
 Texas A&M,80,10,65,15,Ross
-South Carolina,75,40,89,-14,AJ
+Iowa State,78,16,52,26,Jared
+Tennessee,76,25,65,11,Tilo
 Missouri,65,12,73,-8,Jared
 Arizona,65,20,57,8,AJ
-Iowa State,60,16,52,8,Jared
-Tennessee,58,25,65,-7,Tilo
+Louisville,58,6,35,23,AJ
 Miami (FL),55,32,89,-34,Jared
 Colorado,45,35,84,-39,Tilo
 UCLA,45,11,37,8,AJ
@@ -21,22 +22,22 @@ Boston College,45,5,42,3,Jared
 Kentucky,43,1,47,-4,Jawad
 Notre Dame,43,25,75,-32,Jawad
 Minnesota,40,7,44,-4,Jared
-Louisville,40,6,35,5,AJ
 Arkansas,40,3,36,4,Jared
 USC,38,12,17,21,Netten
+Maryland,38,2,29,9,Ross
+California,36,1,21,15,Tilo
+Virginia Tech,36,8,39,-3,Tilo
 Boise State,35,27,42,-7,Jawad
 TCU,35,2,28,7,Ross
 North Dakota State,30,60,25,5,Netten
-California,28,1,21,7,Tilo
 North Carolina,25,10,47,-22,AJ
 UCF,25,1,22,3,Ross
 Illinois,20,40,9,11,Netten
 West Virginia,20,1,22,-2,Ross
 Texas Tech,20,4,20,0,Netten
-Maryland,20,2,29,-9,Ross
-Virginia Tech,18,8,39,-21,Tilo
 Nebraska,18,3,24,-6,AJ
 Auburn,18,1,19,-1,Netten
+Stanford,18,1,22,-4,Jawad
 Oklahoma,16,40,21,-5,Netten
 Marshall,15,7,30,-15,Jared
 Toledo,10,7,24,-14,AJ
@@ -48,3 +49,4 @@ Iowa,10,32,55,-45,Tilo
 Kansas State,10,2,24,-14,Jawad
 Florida,8,3,37,-29,Jared
 Indiana,8,1,20,-12,Jawad
+Clemson,8,40,24,-16,Netten

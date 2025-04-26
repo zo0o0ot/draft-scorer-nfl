@@ -1,15 +1,19 @@
 School,Owner,Bid,Projected,Actual,Difference,PerformanceRatio,PointsPerDollar
+Alabama,AJ,40,95,121,26,1.2736843,3.025
+Iowa State,Jared,16,52,78,26,1.5,4.875
+Louisville,AJ,6,35,58,23,1.6571429,9.666667
 USC,Netten,12,17,38,21,2.235294,3.1666667
 Texas A&M,Ross,10,65,80,15,1.2307693,8
+California,Tilo,1,21,36,15,1.7142857,36
+South Carolina,AJ,40,89,101,12,1.1348314,2.525
+Tennessee,Tilo,25,65,76,11,1.1692308,3.04
 Illinois,Netten,40,9,20,11,2.2222223,0.5
+Maryland,Ross,2,29,38,9,1.3103448,19
 Arizona,AJ,20,57,65,8,1.1403508,3.25
-Iowa State,Jared,16,52,60,8,1.1538461,3.75
 UCLA,AJ,11,37,45,8,1.2162162,4.090909
 TCU,Ross,2,28,35,7,1.25,17.5
-California,Tilo,1,21,28,7,1.3333334,28
 Georgia,Ross,69,160,166,6,1.0375,2.405797
 North Dakota State,Netten,60,25,30,5,1.2,0.5
-Louisville,AJ,6,35,40,5,1.1428572,6.6666665
 Oregon,Jared,55,116,120,4,1.0344827,2.1818182
 Arkansas,Jared,3,36,40,4,1.1111112,13.333333
 Boston College,Jared,5,42,45,3,1.0714285,9
@@ -18,33 +22,31 @@ Texas Tech,Netten,4,20,20,0,1,5
 Auburn,Netten,1,19,18,-1,0.94736844,18
 West Virginia,Ross,1,22,20,-2,0.90909094,20
 Bowling Green,Netten,1,12,10,-2,0.8333333,10
+Virginia Tech,Tilo,8,39,36,-3,0.9230769,4.5
 Minnesota,Jared,7,44,40,-4,0.90909094,5.714286
 Kentucky,Jawad,1,47,43,-4,0.9148936,43
+Stanford,Jawad,1,22,18,-4,0.8181818,18
 Oklahoma,Netten,40,21,16,-5,0.7619048,0.4
+Ohio State,Ross,70,225,219,-6,0.97333336,3.1285715
 Nebraska,AJ,3,24,18,-6,0.75,6
 Boise State,Jawad,27,42,35,-7,0.8333333,1.2962962
-Tennessee,Tilo,25,65,58,-7,0.8923077,2.32
 Michigan,Jawad,140,148,140,-8,0.9459459,1
 Missouri,Jared,12,73,65,-8,0.89041096,5.4166665
-Maryland,Ross,2,29,20,-9,0.6896552,10
-Alabama,AJ,40,95,85,-10,0.8947368,2.125
 East Carolina,Ross,1,20,10,-10,0.5,10
 Oklahoma State,Jawad,1,22,10,-12,0.45454547,10
 Indiana,Jawad,1,20,8,-12,0.4,8
-South Carolina,AJ,40,89,75,-14,0.8426966,1.875
 Toledo,AJ,7,24,10,-14,0.41666666,1.4285715
 Kansas State,Jawad,2,24,10,-14,0.41666666,5
 Penn State,AJ,44,100,85,-15,0.85,1.9318181
 Marshall,Jared,7,30,15,-15,0.5,2.142857
-Virginia Tech,Tilo,8,39,18,-21,0.46153846,2.25
+Clemson,Netten,40,24,8,-16,0.33333334,0.2
 North Carolina,AJ,10,47,25,-22,0.5319149,2.5
 LSU,Ross,31,109,85,-24,0.7798165,2.7419355
 Ole Miss,Jared,40,144,115,-29,0.7986111,2.875
 Florida,Jared,3,37,8,-29,0.21621622,2.6666667
-Ohio State,Ross,70,225,193,-32,0.8577778,2.7571428
 Notre Dame,Jawad,25,75,43,-32,0.5733333,1.72
 Miami (FL),Jared,32,89,55,-34,0.6179775,1.71875
 Florida State,AJ,10,46,10,-36,0.2173913,1
 Colorado,Tilo,35,84,45,-39,0.53571427,1.2857143
+Texas,Tilo,69,202,161,-41,0.7970297,2.3333333
 Iowa,Tilo,32,55,10,-45,0.18181819,0.3125
-Texas,Tilo,69,202,135,-67,0.66831684,1.9565217
