@@ -1,6 +1,7 @@
 School,Owner,Bid,Projected,Actual,Difference,PerformanceRatio,PointsPerDollar
 Alabama,AJ,40,95,121,26,1.2736843,3.025
 Iowa State,Jared,16,52,78,26,1.5,4.875
+Maryland,Ross,2,29,55,26,1.8965517,27.5
 Georgia,Ross,69,160,183,23,1.14375,2.652174
 Louisville,AJ,6,35,58,23,1.6571429,9.666667
 USC,Netten,12,17,38,21,2.235294,3.1666667
@@ -9,7 +10,6 @@ California,Tilo,1,21,36,15,1.7142857,36
 South Carolina,AJ,40,89,101,12,1.1348314,2.525
 Tennessee,Tilo,25,65,76,11,1.1692308,3.04
 Illinois,Netten,40,9,20,11,2.2222223,0.5
-Maryland,Ross,2,29,38,9,1.3103448,19
 Arizona,AJ,20,57,65,8,1.1403508,3.25
 UCLA,AJ,11,37,45,8,1.2162162,4.090909
 TCU,Ross,2,28,35,7,1.25,17.5
@@ -39,13 +39,13 @@ Indiana,Jawad,1,20,8,-12,0.4,8
 Toledo,AJ,7,24,10,-14,0.41666666,1.4285715
 Kansas State,Jawad,2,24,10,-14,0.41666666,5
 Penn State,AJ,44,100,85,-15,0.85,1.9318181
+Notre Dame,Jawad,25,75,60,-15,0.8,2.4
 Marshall,Jared,7,30,15,-15,0.5,2.142857
 Clemson,Netten,40,24,8,-16,0.33333334,0.2
 Florida State,AJ,10,46,28,-18,0.6086956,2.8
 Ole Miss,Jared,40,144,123,-21,0.8541667,3.075
 North Carolina,AJ,10,47,25,-22,0.5319149,2.5
 LSU,Ross,31,109,85,-24,0.7798165,2.7419355
-Notre Dame,Jawad,25,75,43,-32,0.5733333,1.72
 Miami (FL),Jared,32,89,55,-34,0.6179775,1.71875
 Colorado,Tilo,35,84,45,-39,0.53571427,1.2857143
 Texas,Tilo,69,202,161,-41,0.7970297,2.3333333
