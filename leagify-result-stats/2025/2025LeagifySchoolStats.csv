@@ -1,9 +1,9 @@
 School,Owner,Bid,Projected,Actual,Difference,PerformanceRatio,PointsPerDollar
 Maryland,Ross,2,29,72,43,2.4827585,36
+Georgia,Ross,69,160,200,40,1.25,2.8985507
 Oregon,Jared,55,116,154,38,1.3275862,2.8
 Alabama,AJ,40,95,121,26,1.2736843,3.025
 Iowa State,Jared,16,52,78,26,1.5,4.875
-Georgia,Ross,69,160,183,23,1.14375,2.652174
 Louisville,AJ,6,35,58,23,1.6571429,9.666667
 USC,Netten,12,17,38,21,2.235294,3.1666667
 UCF,Ross,1,22,42,20,1.9090909,42
@@ -14,6 +14,7 @@ Florida,Jared,3,37,49,12,1.3243244,16.333334
 Tennessee,Tilo,25,65,76,11,1.1692308,3.04
 Ohio State,Ross,70,225,236,11,1.0488889,3.3714285
 Illinois,Netten,40,9,20,11,2.2222223,0.5
+Kansas State,Jawad,2,24,34,10,1.4166666,17
 Arizona,AJ,20,57,65,8,1.1403508,3.25
 UCLA,AJ,11,37,45,8,1.2162162,4.090909
 TCU,Ross,2,28,35,7,1.25,17.5
@@ -34,7 +35,6 @@ Oklahoma,Netten,40,21,16,-5,0.7619048,0.4
 Nebraska,AJ,3,24,18,-6,0.75,6
 LSU,Ross,31,109,102,-7,0.9357798,3.2903225
 Boise State,Jawad,27,42,35,-7,0.8333333,1.2962962
-Kansas State,Jawad,2,24,17,-7,0.7083333,8.5
 Michigan,Jawad,140,148,140,-8,0.9459459,1
 Missouri,Jared,12,73,65,-8,0.89041096,5.4166665
 East Carolina,Ross,1,20,10,-10,0.5,10
