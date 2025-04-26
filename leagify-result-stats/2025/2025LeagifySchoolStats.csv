@@ -10,6 +10,7 @@ Michigan,Jawad,140,148,172,24,1.1621622,1.2285714
 Arizona,AJ,20,57,81,24,1.4210526,4.05
 Miami (FL),Jared,32,89,112,23,1.258427,3.5
 Louisville,AJ,6,35,58,23,1.6571429,9.666667
+Auburn,Netten,1,19,41,22,2.1578948,41
 USC,Netten,12,17,38,21,2.235294,3.1666667
 UCF,Ross,1,22,42,20,1.9090909,42
 Texas A&M,Ross,10,65,80,15,1.2307693,8
@@ -25,14 +26,14 @@ Kansas State,Jawad,2,24,34,10,1.4166666,17
 UCLA,AJ,11,37,45,8,1.2162162,4.090909
 Notre Dame,Jawad,25,75,83,8,1.1066667,3.32
 TCU,Ross,2,28,35,7,1.25,17.5
-Auburn,Netten,1,19,25,6,1.3157895,25
+Texas Tech,Netten,4,20,26,6,1.3,6.5
 North Dakota State,Netten,60,25,30,5,1.2,0.5
 Colorado State,Tilo,2,12,17,5,1.4166666,8.5
 Arkansas,Jared,3,36,40,4,1.1111112,13.333333
 Ole Miss,Jared,40,144,146,2,1.0138888,3.65
+Kansas,Tilo,15,30,32,2,1.0666667,2.1333334
 Penn State,AJ,44,100,101,1,1.01,2.2954545
 Syracuse,Ross,3,32,33,1,1.03125,11
-Texas Tech,Netten,4,20,20,0,1,5
 Purdue,Tilo,1,17,17,0,1,17
 West Virginia,Ross,1,22,20,-2,0.90909094,20
 Bowling Green,Netten,1,12,10,-2,0.8333333,10
@@ -45,7 +46,6 @@ Boise State,Jawad,27,42,35,-7,0.8333333,1.2962962
 Missouri,Jared,12,73,65,-8,0.89041096,5.4166665
 East Carolina,Ross,1,20,10,-10,0.5,10
 Indiana,Jawad,1,20,8,-12,0.4,8
-Kansas,Tilo,15,30,16,-14,0.53333336,1.0666667
 Toledo,AJ,7,24,10,-14,0.41666666,1.4285715
 Marshall,Jared,7,30,15,-15,0.5,2.142857
 Clemson,Netten,40,24,8,-16,0.33333334,0.2
