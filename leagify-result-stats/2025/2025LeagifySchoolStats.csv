@@ -1,5 +1,6 @@
 School,Owner,Bid,Projected,Actual,Difference,PerformanceRatio,PointsPerDollar
 Arizona,AJ,20,57,65,8,1.1403508,3.25
+UCLA,AJ,11,37,45,8,1.2162162,4.090909
 North Dakota State,Netten,60,25,30,5,1.2,0.5
 Boise State,Jawad,27,42,35,-7,0.8333333,1.2962962
 Missouri,Jared,12,73,65,-8,0.89041096,5.4166665
@@ -7,7 +8,6 @@ Texas A&M,Ross,10,65,55,-10,0.84615386,5.5
 South Carolina,AJ,40,89,75,-14,0.8426966,1.875
 Minnesota,Jared,7,44,30,-14,0.6818182,4.285714
 Louisville,AJ,6,35,20,-15,0.5714286,3.3333333
-UCLA,AJ,11,37,20,-17,0.5405405,1.8181819
 Michigan,Jawad,140,148,130,-18,0.8783784,0.9285714
 Iowa State,Jared,16,52,30,-22,0.5769231,1.875
 North Carolina,AJ,10,47,25,-22,0.5319149,2.5
