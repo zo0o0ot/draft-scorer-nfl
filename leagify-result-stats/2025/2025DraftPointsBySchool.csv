@@ -10,6 +10,7 @@ Miami (FL),127,32,89,38,Jared
 LSU,119,31,109,10,Ross
 Penn State,117,44,100,17,AJ
 South Carolina,101,40,89,12,AJ
+Maryland,87,2,29,58,Ross
 Colorado,84,35,84,0,Tilo
 Notre Dame,83,25,75,8,Jawad
 Arizona,81,20,57,24,AJ
@@ -18,7 +19,6 @@ Texas A&M,80,10,65,15,Ross
 Iowa State,78,16,52,26,Jared
 Tennessee,76,25,65,11,Tilo
 Virginia Tech,74,8,39,35,Tilo
-Maryland,72,2,29,43,Ross
 Missouri,70,12,73,-3,Jared
 UCLA,66,11,37,29,AJ
 Louisville,58,6,35,23,AJ
@@ -39,6 +39,7 @@ Kansas State,34,2,24,10,Jawad
 Oklahoma State,33,1,22,11,Jawad
 Iowa,32,32,55,-23,Tilo
 Kansas,32,15,30,2,Tilo
+Clemson,29,40,24,5,Netten
 Florida State,28,10,46,-18,AJ
 Texas Tech,26,4,20,6,Netten
 North Carolina,25,10,47,-22,AJ
@@ -50,7 +51,6 @@ Purdue,17,1,17,0,Tilo
 Colorado State,17,2,12,5,Tilo
 Oklahoma,16,40,21,-5,Netten
 Marshall,15,7,30,-15,Jared
-Clemson,14,40,24,-10,Netten
 Indiana,13,1,20,-7,Jawad
 Toledo,10,7,24,-14,AJ
 Bowling Green,10,1,12,-2,Netten
