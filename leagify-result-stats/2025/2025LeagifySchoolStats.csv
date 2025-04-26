@@ -2,6 +2,7 @@ School,Owner,Bid,Projected,Actual,Difference,PerformanceRatio,PointsPerDollar
 Maryland,Ross,2,29,72,43,2.4827585,36
 Georgia,Ross,69,160,200,40,1.25,2.8985507
 Oregon,Jared,55,116,154,38,1.3275862,2.8
+Ohio State,Ross,70,225,253,28,1.1244445,3.6142857
 Alabama,AJ,40,95,121,26,1.2736843,3.025
 Iowa State,Jared,16,52,78,26,1.5,4.875
 Louisville,AJ,6,35,58,23,1.6571429,9.666667
@@ -12,8 +13,8 @@ California,Tilo,1,21,36,15,1.7142857,36
 South Carolina,AJ,40,89,101,12,1.1348314,2.525
 Florida,Jared,3,37,49,12,1.3243244,16.333334
 Tennessee,Tilo,25,65,76,11,1.1692308,3.04
-Ohio State,Ross,70,225,236,11,1.0488889,3.3714285
 Illinois,Netten,40,9,20,11,2.2222223,0.5
+LSU,Ross,31,109,119,10,1.0917431,3.8387096
 Boston College,Jared,5,42,52,10,1.2380953,10.4
 Kansas State,Jawad,2,24,34,10,1.4166666,17
 Arizona,AJ,20,57,65,8,1.1403508,3.25
@@ -35,7 +36,6 @@ Stanford,Jawad,1,22,18,-4,0.8181818,18
 Oklahoma State,Jawad,1,22,17,-5,0.77272725,17
 Oklahoma,Netten,40,21,16,-5,0.7619048,0.4
 Nebraska,AJ,3,24,18,-6,0.75,6
-LSU,Ross,31,109,102,-7,0.9357798,3.2903225
 Boise State,Jawad,27,42,35,-7,0.8333333,1.2962962
 Michigan,Jawad,140,148,140,-8,0.9459459,1
 Missouri,Jared,12,73,65,-8,0.89041096,5.4166665
